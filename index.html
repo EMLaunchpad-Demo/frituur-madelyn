@@ -1,576 +1,116 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl-BE">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frituur Madelyn — Borgloon</title>
-<meta name="description" content="De echte Belgische friet aan de Graethempoort in Borgloon. Vers geschild, dubbel gebakken. Bestel online en haal af — klaar in een kwartier.">
-<meta property="og:title" content="Frituur Madelyn — Borgloon">
-<meta property="og:description" content="Dubbel gebakken frietjes uit Haspengouw. Bestel om af te halen aan de Graethempoort 6, Borgloon.">
-<meta property="og:type" content="website">
+
+<title>Frituur Madelyn Borgloon | Verse friet &amp; snacks in Haspengouw</title>
+<meta name="description" content="Frituur Madelyn aan de Graethempoort in Borgloon: verse, dubbel gebakken friet, huisgemaakte stoofvlees en snacks. Bekijk de menukaart en openingsuren, of bel 012 74 20 24.">
+<link rel="canonical" href="https://www.frituurmadelyn.be/">
+<meta name="robots" content="index,follow">
+<meta name="geo.region" content="BE-VLI">
+<meta name="geo.placename" content="Borgloon">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="Frituur Madelyn">
+<meta property="og:title" content="Frituur Madelyn Borgloon | Verse friet &amp; snacks in Haspengouw">
+<meta property="og:description" content="Verse, dubbel gebakken friet en huisgemaakte stoofvlees aan de Graethempoort in Borgloon.">
+<meta property="og:url" content="https://www.frituurmadelyn.be/">
+<meta property="og:image" content="https://www.frituurmadelyn.be/assets/img/og-frituur-madelyn.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍟</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<style>
-/* =========================================================================
-   FRITUUR MADELYN — Borgloon  •  demo website
-   Design: "avondfriet" — warm dark ground, golden-amber + petrol teal,
-   kraft-paper grain, receipt-styled cart. Single self-contained file.
-   ========================================================================= */
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.className+=" js";try{var t=localStorage.getItem("fm-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 
-/* ---------- Design tokens : LIGHT (kraft daylight) ---------- */
-:root{
-  --paper:#EDE0C8;          /* warm kraft ground */
-  --paper-2:#E4D4B6;
-  --surface:#FBF4E3;        /* cards */
-  --surface-2:#F5EAD2;
-  --ink:#241B10;            /* warm near-black text */
-  --ink-soft:#6A5942;
-  --ink-faint:#9A876A;
-  --gold:#EDA92B;           /* brand fill (frituur goud) */
-  --gold-deep:#B26A0F;      /* accessible gold text on light */
-  --gold-glow:rgba(237,169,43,.35);
-  --petrol:#0C5A53;         /* cool counterpoint / links */
-  --petrol-soft:#0f6d64;
-  --tomato:#C63A22;         /* minor hot accent */
-  --line:rgba(36,27,16,.14);
-  --line-strong:rgba(36,27,16,.28);
-  --shadow:0 22px 50px -24px rgba(52,33,4,.45);
-  --shadow-soft:0 10px 30px -18px rgba(52,33,4,.5);
-  --open:#2F7D4F;
-  --closed:#B23B2B;
-  --grain-opacity:.05;
-  --receipt:#fbf7ee;        /* thermal paper */
-  --receipt-ink:#2b2114;
-  --hero-veil:linear-gradient(180deg, rgba(28,20,10,.02), rgba(28,20,10,.10));
-  color-scheme: light;
-}
-
-/* ---------- Design tokens : DARK (avondfriet night) ---------- */
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#140F0A;
-    --paper-2:#1B1510;
-    --surface:#201811;
-    --surface-2:#2A2016;
-    --ink:#F6EAD2;
-    --ink-soft:#CBB491;
-    --ink-faint:#94805f;
-    --gold:#F2B33E;
-    --gold-deep:#F7C55E;
-    --gold-glow:rgba(242,179,62,.5);
-    --petrol:#48C4B4;
-    --petrol-soft:#5fd2c3;
-    --tomato:#F16A46;
-    --line:rgba(246,234,210,.13);
-    --line-strong:rgba(246,234,210,.26);
-    --shadow:0 30px 60px -28px rgba(0,0,0,.8);
-    --shadow-soft:0 14px 34px -20px rgba(0,0,0,.75);
-    --open:#54C07E;
-    --closed:#F0765C;
-    --grain-opacity:.07;
-    --receipt:#f4ecdd;
-    --receipt-ink:#241c12;
-    --hero-veil:linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.45));
-    color-scheme: dark;
+<!-- Lokale SEO: bedrijfsgegevens voor Google -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "@id":"https://www.frituurmadelyn.be/#restaurant",
+  "name":"Frituur Madelyn",
+  "url":"https://www.frituurmadelyn.be/",
+  "telephone":"+3212742024",
+  "email":"info@frituurmadelyn.be",
+  "servesCuisine":["Belgisch","Frituur","Fastfood"],
+  "priceRange":"€€",
+  "currenciesAccepted":"EUR",
+  "paymentAccepted":"Cash, Bancontact",
+  "image":"https://www.frituurmadelyn.be/assets/img/og-frituur-madelyn.jpg",
+  "hasMenu":"https://www.frituurmadelyn.be/menu.html",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Graethempoort 6",
+    "postalCode":"3840",
+    "addressLocality":"Borgloon",
+    "addressRegion":"Limburg",
+    "addressCountry":"BE"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":50.8033,"longitude":5.3433},
+  "areaServed":["Borgloon","Haspengouw","Tongeren","Kerniel","Jesseren","Hoepertingen"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Sunday"],"opens":"11:00","closes":"14:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Sunday"],"opens":"16:30","closes":"22:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"14:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"16:30","closes":"23:00"}
+  ],
+  "department":{
+    "@type":"EventVenue",
+    "name":"Feestzaal Graethempoort",
+    "url":"https://www.frituurmadelyn.be/feestzaal.html"
   }
 }
-:root[data-theme="dark"]{
-  --paper:#140F0A;
-  --paper-2:#1B1510;
-  --surface:#201811;
-  --surface-2:#2A2016;
-  --ink:#F6EAD2;
-  --ink-soft:#CBB491;
-  --ink-faint:#94805f;
-  --gold:#F2B33E;
-  --gold-deep:#F7C55E;
-  --gold-glow:rgba(242,179,62,.5);
-  --petrol:#48C4B4;
-  --petrol-soft:#5fd2c3;
-  --tomato:#F16A46;
-  --line:rgba(246,234,210,.13);
-  --line-strong:rgba(246,234,210,.26);
-  --shadow:0 30px 60px -28px rgba(0,0,0,.8);
-  --shadow-soft:0 14px 34px -20px rgba(0,0,0,.75);
-  --open:#54C07E;
-  --closed:#F0765C;
-  --grain-opacity:.07;
-  --receipt:#f4ecdd;
-  --receipt-ink:#241c12;
-  --hero-veil:linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.45));
-  color-scheme: dark;
-}
-
-/* ---------- Reset / base ---------- */
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:"Hanken Grotesk", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-size:clamp(15px,.5vw + 14px,17px);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-/* paper grain overlay */
-body::before{
-  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity:var(--grain-opacity);mix-blend-mode:multiply;
-}
-:root[data-theme="dark"] body::before,
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body::before{mix-blend-mode:screen}}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
-h1,h2,h3,h4{margin:0;line-height:1.02;font-family:"Bricolage Grotesque", system-ui, sans-serif;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
-p{margin:0}
-:focus-visible{outline:3px solid var(--petrol);outline-offset:3px;border-radius:4px}
-
-/* ---------- Layout helpers ---------- */
-.wrap{width:min(1180px,92vw);margin-inline:auto}
-.section{position:relative;z-index:2;padding:clamp(3.6rem,7vw,7rem) 0}
-.eyebrow{
-  font-family:"Anton", Impact, sans-serif;font-weight:400;letter-spacing:.14em;
-  text-transform:uppercase;font-size:.82rem;color:var(--gold-deep);
-  display:inline-flex;align-items:center;gap:.6rem;
-}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);display:inline-block}
-.script{font-family:"Caveat", cursive;font-weight:700}
-.tnum{font-variant-numeric:tabular-nums}
-
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  padding:.9rem 1.4rem;border-radius:999px;font-weight:700;
-  letter-spacing:.01em;transition:transform .18s ease, box-shadow .25s ease, background .2s;
-  will-change:transform;white-space:nowrap;
-}
-.btn svg{width:1.15em;height:1.15em}
-.btn-gold{background:var(--gold);color:#241B10;box-shadow:0 10px 26px -10px var(--gold-glow)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px var(--gold-glow)}
-.btn-ghost{border:1.5px solid var(--line-strong);color:var(--ink);background:var(--surface)}
-.btn-ghost:hover{transform:translateY(-2px);border-color:var(--gold)}
-.btn-petrol{background:var(--petrol);color:#fff}
-.btn-petrol:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0) scale(.98)}
-
-/* ---------- Top ribbon / nav ---------- */
-.topbar{
-  position:relative;z-index:40;background:var(--ink);color:var(--paper);
-  font-size:.82rem;letter-spacing:.01em;
-}
-.topbar .wrap{display:flex;gap:1.2rem;align-items:center;justify-content:center;padding:.5rem 0;flex-wrap:wrap;text-align:center}
-.topbar b{color:var(--gold)}
-.topbar .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;margin-inline:.2rem}
-.demo-chip{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.1rem .55rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
-
-header.nav{position:sticky;top:0;z-index:39;transition:background .3s, box-shadow .3s, padding .3s}
-header.nav .wrap{display:flex;align-items:center;gap:1.2rem;padding:1.05rem 0}
-header.nav.solid{background:color-mix(in srgb, var(--paper) 86%, transparent);backdrop-filter:blur(12px) saturate(1.2);box-shadow:0 1px 0 var(--line), var(--shadow-soft)}
-.brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.15rem;letter-spacing:-.03em;margin-right:auto}
-.brand .mark{width:38px;height:38px;flex:0 0 auto;filter:drop-shadow(0 4px 10px var(--gold-glow))}
-.brand small{display:block;font-family:"Anton";font-weight:400;font-size:.62rem;letter-spacing:.22em;color:var(--gold-deep);margin-top:2px}
-nav.links{display:flex;gap:.3rem;align-items:center}
-nav.links a{padding:.5rem .8rem;border-radius:999px;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:color .2s, background .2s}
-nav.links a:hover{color:var(--ink);background:var(--surface-2)}
-.nav-actions{display:flex;align-items:center;gap:.5rem}
-.icon-btn{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);background:var(--surface);transition:transform .18s, border-color .2s}
-.icon-btn:hover{transform:translateY(-2px);border-color:var(--gold)}
-.icon-btn svg{width:20px;height:20px}
-.cart-btn{position:relative}
-.cart-count{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--tomato);color:#fff;font-size:.7rem;font-weight:700;display:grid;place-items:center;transform:scale(0);transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
-.cart-count.show{transform:scale(1)}
-.hamburger{display:none}
-
-/* ---------- Hero ---------- */
-.hero{position:relative;z-index:2;overflow:hidden;padding-top:clamp(1.5rem,3vw,3rem)}
-.hero-glow{position:absolute;z-index:0;width:70vw;height:70vw;max-width:820px;max-height:820px;right:-14vw;top:-16vw;
-  background:radial-gradient(circle, var(--gold-glow), transparent 62%);filter:blur(10px);pointer-events:none}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
-.hero-copy{position:relative}
-.status-pill{display:inline-flex;align-items:center;gap:.55rem;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:.4rem .85rem .4rem .5rem;font-weight:600;font-size:.9rem;box-shadow:var(--shadow-soft)}
-.status-dot{width:11px;height:11px;border-radius:50%;background:var(--closed);box-shadow:0 0 0 0 currentColor;position:relative}
-.status-pill.open .status-dot{background:var(--open);animation:pulse 2.4s infinite}
-.status-pill.open{color:var(--open)}
-.status-pill.closed{color:var(--closed)}
-.status-pill .txt{color:var(--ink)}
-@keyframes pulse{0%{box-shadow:0 0 0 0 var(--open)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.hero h1{font-size:clamp(2.7rem,7vw,5.1rem);margin:1.1rem 0 0}
-.hero h1 .g{color:var(--gold-deep);position:relative;white-space:nowrap}
-.hero h1 .u{background:linear-gradient(transparent 68%, var(--gold-glow) 0);}
-.hero-sub{font-size:clamp(1.05rem,1.5vw,1.22rem);color:var(--ink-soft);max-width:46ch;margin-top:1.2rem}
-.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.7rem}
-.hero-trust{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1.9rem;padding-top:1.5rem;border-top:1px dashed var(--line-strong)}
-.trust-item{display:flex;flex-direction:column;gap:.1rem}
-.trust-item b{font-family:"Bricolage Grotesque";font-size:1.35rem;font-weight:800;letter-spacing:-.02em}
-.trust-item span{font-size:.8rem;color:var(--ink-faint);letter-spacing:.02em}
-.stars{color:var(--gold);letter-spacing:.08em}
-
-/* hero art : puntzak (paper cone of fries) */
-.hero-art{position:relative;display:grid;place-items:center;min-height:min(60vw,440px)}
-.cone-wrap{position:relative;width:min(78%,360px);animation:bob 6s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-14px) rotate(1deg)}}
-.steam{position:absolute;left:50%;top:2%;transform:translateX(-50%);width:60%;height:40%;z-index:0;pointer-events:none}
-.steam span{position:absolute;bottom:0;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle,var(--ink-soft),transparent 70%);opacity:0;filter:blur(3px)}
-.steam span:nth-child(1){left:26%;animation:rise 4.2s ease-in infinite}
-.steam span:nth-child(2){left:48%;animation:rise 4.2s ease-in .9s infinite}
-.steam span:nth-child(3){left:64%;animation:rise 4.2s ease-in 1.8s infinite}
-.steam span:nth-child(4){left:38%;animation:rise 4.2s ease-in 2.6s infinite}
-@keyframes rise{0%{opacity:0;transform:translateY(0) scale(.6)}25%{opacity:.5}100%{opacity:0;transform:translateY(-130px) scale(1.9)}}
-.badge-spin{position:absolute;right:-6%;bottom:4%;width:118px;height:118px;z-index:5;animation:spin 24s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.badge-spin text{font-family:"Anton";fill:var(--ink);font-size:12.6px;letter-spacing:2px}
-.badge-spin .disc{fill:var(--gold)}
-.floaty{position:absolute;z-index:6;font-size:.78rem;font-weight:700;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:.35rem .7rem;box-shadow:var(--shadow-soft);display:flex;gap:.35rem;align-items:center}
-.floaty.a{left:-4%;top:16%;animation:bob 5s ease-in-out infinite}
-.floaty.b{right:2%;top:30%;animation:bob 5.6s ease-in-out .6s infinite}
-.floaty .em{filter:saturate(1.1)}
-
-/* ---------- Marquee ---------- */
-.marquee{position:relative;z-index:2;background:var(--ink);color:var(--paper);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);overflow:hidden;padding:.85rem 0}
-.marquee-track{display:flex;gap:2.4rem;width:max-content;animation:scroll 34s linear infinite;font-family:"Anton";text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;white-space:nowrap}
-.marquee-track span{display:inline-flex;align-items:center;gap:2.4rem;color:var(--paper)}
-.marquee-track b{color:var(--gold);font-weight:400}
-.marquee .star{color:var(--gold)}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.marquee:hover .marquee-track{animation-play-state:paused}
-
-/* ---------- USP strip ---------- */
-.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem}
-.usp{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.35rem;box-shadow:var(--shadow-soft);transition:transform .25s, border-color .25s}
-.usp:hover{transform:translateY(-6px);border-color:var(--gold)}
-.usp .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line);margin-bottom:1rem}
-.usp .ico svg{width:28px;height:28px;stroke:var(--gold-deep)}
-.usp h3{font-size:1.15rem;font-weight:700;margin-bottom:.35rem}
-.usp p{font-size:.92rem;color:var(--ink-soft)}
-
-/* ---------- Section head ---------- */
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
-.sec-head h2{font-size:clamp(1.9rem,4vw,3rem)}
-.sec-head p{color:var(--ink-soft);max-width:52ch;margin-top:.5rem}
-
-/* ---------- Photo tile with graceful fallback ---------- */
-.photo{position:relative;overflow:hidden;border-radius:16px;background:
-   radial-gradient(120% 120% at 20% 10%, var(--surface-2), var(--surface) 70%);
-   border:1px solid var(--line);isolation:isolate}
-.photo::after{content:"";position:absolute;inset:0;background:var(--hero-veil);z-index:2;pointer-events:none}
-.photo .art{position:absolute;inset:0;z-index:1}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;transition:opacity .5s, transform .6s ease}
-.photo img.failed{opacity:0}
-.photo .tag{position:absolute;left:.7rem;top:.7rem;z-index:4;background:var(--gold);color:#241B10;font-weight:700;font-size:.72rem;padding:.25rem .6rem;border-radius:999px;letter-spacing:.02em}
-.photo .cap{position:absolute;left:.85rem;bottom:.75rem;right:.85rem;z-index:4;color:#fff;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.6);font-size:1.02rem}
-.photo .cap small{display:block;font-weight:600;opacity:.9;font-size:.78rem}
-
-/* ---------- Toppers ---------- */
-.toppers{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:1rem}
-.topper{position:relative;border-radius:18px;overflow:hidden;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;box-shadow:var(--shadow-soft)}
-.topper.big{grid-row:span 2;min-height:440px}
-.topper .photo{position:absolute;inset:0;border-radius:0;border:none}
-.topper .body{position:relative;z-index:5;padding:1.2rem}
-.topper h3{font-size:1.3rem;text-shadow:0 2px 12px rgba(0,0,0,.55)}
-.topper .desc{font-size:.86rem;opacity:.92;margin-top:.2rem;text-shadow:0 2px 10px rgba(0,0,0,.6);max-width:34ch}
-.topper .row{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem;gap:.6rem}
-.topper .price{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.35rem}
-.add-mini{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:#241B10;font-weight:700;border-radius:999px;padding:.5rem .9rem;font-size:.86rem;transition:transform .18s}
-.add-mini:hover{transform:translateY(-2px)}
-
-/* ---------- ORDER / MENU ---------- */
-.order{background:
-  linear-gradient(0deg,var(--paper-2),var(--paper-2)) padding-box;
-  position:relative;z-index:2}
-.order .wrap{position:relative;z-index:2}
-.cat-nav{position:sticky;top:70px;z-index:30;display:flex;gap:.5rem;overflow-x:auto;padding:.7rem;margin:1.2rem 0 2rem;
-  background:color-mix(in srgb,var(--surface) 90%, transparent);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-soft);scrollbar-width:thin}
-.cat-nav button{flex:0 0 auto;padding:.55rem 1rem;border-radius:999px;font-weight:600;color:var(--ink-soft);border:1.5px solid transparent;transition:all .2s;white-space:nowrap}
-.cat-nav button:hover{color:var(--ink);background:var(--surface-2)}
-.cat-nav button.active{background:var(--ink);color:var(--paper)}
-:root[data-theme="dark"] .cat-nav button.active{background:var(--gold);color:#241B10}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cat-nav button.active{background:var(--gold);color:#241B10}}
-
-.menu-cat{margin-bottom:2.8rem;scroll-margin-top:150px}
-.menu-cat-head{display:flex;align-items:baseline;gap:.9rem;margin-bottom:1.1rem;padding-bottom:.6rem;border-bottom:2px solid var(--line)}
-.menu-cat-head .n{font-family:"Anton";color:var(--gold);font-size:1.1rem}
-.menu-cat-head h3{font-size:clamp(1.5rem,3vw,2.1rem)}
-.menu-cat-head .note{margin-left:auto;font-size:.82rem;color:var(--ink-faint);font-weight:600}
-.items{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
-.item{display:flex;gap:1rem;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.05rem;transition:border-color .2s, transform .2s, box-shadow .2s}
-.item:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow-soft)}
-.item .info{flex:1;min-width:0}
-.item .nm{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.04rem}
-.item .pop{font-size:.62rem;font-family:"Anton";letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--tomato);padding:.08rem .4rem;border-radius:4px}
-.item .veg{font-size:.62rem;font-family:"Anton";letter-spacing:.06em;color:#fff;background:var(--open);padding:.08rem .4rem;border-radius:4px}
-.item .ds{font-size:.85rem;color:var(--ink-soft);margin-top:.2rem}
-.item .foot{display:flex;align-items:center;gap:.6rem;margin-top:.7rem}
-.item .pr{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.12rem}
-.item .pr small{color:var(--ink-faint);font-weight:600;font-size:.72rem;font-family:"Hanken Grotesk"}
-.add{margin-left:auto;display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid var(--line-strong);border-radius:999px;padding:.42rem .8rem;font-weight:700;font-size:.86rem;transition:all .18s;background:var(--surface)}
-.add:hover{background:var(--gold);border-color:var(--gold);color:#241B10;transform:translateY(-2px)}
-.add svg{width:15px;height:15px}
-.add.opt{border-style:dashed}
-.order-help{display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;margin-top:1.5rem;padding:1.2rem 1.4rem;background:var(--surface);border:1px dashed var(--line-strong);border-radius:16px;font-size:.9rem;color:var(--ink-soft)}
-.order-help b{color:var(--ink)}
-.order-help div{display:flex;gap:.55rem;align-items:flex-start}
-.order-help svg{width:20px;height:20px;stroke:var(--gold-deep);flex:0 0 auto;margin-top:1px}
-
-/* ---------- Options modal ---------- */
-.modal-back{position:fixed;inset:0;z-index:80;background:rgba(10,7,3,.55);backdrop-filter:blur(4px);display:none;place-items:center;padding:1.2rem;opacity:0;transition:opacity .25s}
-.modal-back.show{display:grid;opacity:1}
-.modal{background:var(--surface);border:1px solid var(--line);border-radius:20px;width:min(460px,94vw);max-height:88vh;overflow:auto;box-shadow:var(--shadow);transform:translateY(14px) scale(.98);transition:transform .3s}
-.modal-back.show .modal{transform:none}
-.modal-h{padding:1.3rem 1.4rem 0}
-.modal-h h3{font-size:1.4rem}
-.modal-h p{color:var(--ink-soft);font-size:.9rem;margin-top:.25rem}
-.opt-group{padding:1.1rem 1.4rem 0}
-.opt-group h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-family:"Anton";font-weight:400;margin-bottom:.6rem}
-.opt-row{display:flex;align-items:center;gap:.7rem;padding:.6rem .7rem;border:1.5px solid var(--line);border-radius:12px;margin-bottom:.5rem;cursor:pointer;transition:border-color .18s, background .18s}
-.opt-row:hover{border-color:var(--gold)}
-.opt-row.sel{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 12%, transparent)}
-.opt-row input{accent-color:var(--gold);width:18px;height:18px}
-.opt-row .l{font-weight:600}
-.opt-row .p{margin-left:auto;color:var(--ink-soft);font-weight:600;font-size:.9rem}
-.modal-f{padding:1.3rem 1.4rem;position:sticky;bottom:0;background:var(--surface);border-top:1px solid var(--line);display:flex;gap:.7rem;align-items:center;margin-top:1rem}
-.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line-strong);border-radius:999px;overflow:hidden}
-.qty button{width:38px;height:40px;font-size:1.2rem;font-weight:700;display:grid;place-items:center;transition:background .15s}
-.qty button:hover{background:var(--surface-2)}
-.qty span{min-width:30px;text-align:center;font-weight:700}
-
-/* ---------- Cart drawer (kassabon) ---------- */
-.scrim{position:fixed;inset:0;z-index:60;background:rgba(10,7,3,.5);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
-.scrim.show{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(430px,100vw);z-index:70;transform:translateX(102%);transition:transform .38s cubic-bezier(.4,0,.1,1);display:flex;flex-direction:column;background:var(--receipt);color:var(--receipt-ink)}
-.drawer.show{transform:none;box-shadow:-30px 0 60px -30px rgba(0,0,0,.6)}
-.drawer .d-head{padding:1.2rem 1.3rem 1rem;border-bottom:2px dashed rgba(43,33,20,.28);display:flex;align-items:center;gap:.7rem}
-.drawer .d-head .logo{width:34px;height:34px}
-.drawer .d-head h3{font-family:"Bricolage Grotesque";font-size:1.15rem;color:var(--receipt-ink)}
-.drawer .d-head small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-family:"Anton";font-weight:400;color:#9a7b3f}
-.drawer .d-close{margin-left:auto;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(43,33,20,.2)}
-.drawer .d-close:hover{background:rgba(43,33,20,.06)}
-.receipt-meta{font-family:"Hanken Grotesk";font-size:.78rem;color:#7c6338;padding:.7rem 1.3rem;display:flex;justify-content:space-between;border-bottom:1px dashed rgba(43,33,20,.25);letter-spacing:.02em}
-.d-body{flex:1;overflow-y:auto;padding:.6rem 1.3rem}
-.empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;padding:2.6rem 1rem;color:#8a6f42}
-.empty svg{width:74px;height:74px;opacity:.75}
-.empty b{font-family:"Bricolage Grotesque";font-size:1.15rem;color:var(--receipt-ink)}
-.line{display:flex;gap:.7rem;padding:.8rem 0;border-bottom:1px dashed rgba(43,33,20,.22)}
-.line .qbox{display:flex;flex-direction:column;align-items:center;gap:.2rem}
-.line .qbtn{width:26px;height:26px;border-radius:7px;border:1.5px solid rgba(43,33,20,.25);display:grid;place-items:center;font-weight:700;line-height:1;transition:background .15s}
-.line .qbtn:hover{background:rgba(43,33,20,.08)}
-.line .q{font-weight:700;font-variant-numeric:tabular-nums;font-size:.9rem}
-.line .l-info{flex:1;min-width:0}
-.line .l-nm{font-weight:700;font-size:.98rem;display:flex;justify-content:space-between;gap:.6rem}
-.line .l-opts{font-size:.78rem;color:#7c6338;margin-top:.15rem}
-.line .l-rm{font-size:.76rem;color:var(--tomato);margin-top:.35rem;font-weight:600}
-.line .l-rm:hover{text-decoration:underline}
-.line .l-price{font-family:"Bricolage Grotesque";font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
-.d-foot{border-top:2px dashed rgba(43,33,20,.3);padding:1rem 1.3rem 1.3rem;background:var(--receipt)}
-.d-foot .fld{margin-bottom:.7rem}
-.d-foot label{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#8a6f42;font-weight:700;margin-bottom:.3rem}
-.d-foot input,.d-foot select,.d-foot textarea{width:100%;padding:.6rem .7rem;border:1.5px solid rgba(43,33,20,.25);border-radius:10px;background:#fffdf7;color:var(--receipt-ink);font:inherit}
-.d-foot input:focus,.d-foot select:focus,.d-foot textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
-.two{display:flex;gap:.6rem}
-.two>*{flex:1}
-.totals{font-family:"Hanken Grotesk";margin:.4rem 0 .9rem}
-.totals .r{display:flex;justify-content:space-between;padding:.15rem 0;font-size:.9rem;color:#6f5836}
-.totals .grand{border-top:2px solid rgba(43,33,20,.3);margin-top:.4rem;padding-top:.5rem;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.25rem;color:var(--receipt-ink)}
-.place{width:100%;justify-content:center;font-size:1.02rem;padding:1rem}
-.place[disabled]{opacity:.5;cursor:not-allowed;transform:none}
-.min-note{font-size:.76rem;color:#a35;text-align:center;margin-top:.5rem;min-height:1em}
-
-/* confirmation */
-.confirm{padding:0}
-.kassabon{padding:1.6rem 1.5rem 1rem;text-align:center}
-.kassabon .chk{width:64px;height:64px;margin:0 auto .6rem;border-radius:50%;background:var(--open);display:grid;place-items:center}
-.kassabon .chk svg{width:34px;height:34px;stroke:#fff}
-.kassabon h3{font-size:1.6rem}
-.kassabon .ordernr{font-family:"Anton";letter-spacing:.1em;color:var(--gold-deep);margin-top:.3rem}
-.kassabon .k-list{text-align:left;font-size:.86rem;margin:1.2rem 0;border-top:1px dashed var(--line-strong);border-bottom:1px dashed var(--line-strong);padding:.8rem 0}
-.kassabon .k-list .r{display:flex;justify-content:space-between;padding:.16rem 0;color:var(--ink-soft)}
-.kassabon .k-list .r b{color:var(--ink)}
-.kassabon .pickup{background:var(--surface-2);border-radius:12px;padding:.9rem;margin-bottom:.4rem}
-.kassabon .pickup .t{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.5rem;color:var(--gold-deep)}
-
-/* ---------- Story ---------- */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
-.story-media{position:relative}
-.story-media .photo{aspect-ratio:4/5}
-.story-media .stamp{position:absolute;right:-18px;bottom:-18px;width:120px;height:120px;z-index:6;animation:spin 30s linear infinite}
-.story-media .stamp text{font-family:"Anton";fill:var(--ink)}
-.story-media .stamp .disc{fill:var(--surface);stroke:var(--gold);stroke-width:2}
-.story h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:1rem}
-.story p{color:var(--ink-soft);margin-bottom:1rem}
-.story .sig{font-family:"Caveat";font-size:2rem;color:var(--gold-deep);line-height:1}
-.story .facts{display:flex;gap:1.6rem;margin-top:1.4rem;flex-wrap:wrap}
-.story .facts b{font-family:"Bricolage Grotesque";font-size:1.7rem;display:block}
-.story .facts span{font-size:.8rem;color:var(--ink-faint)}
-
-/* ---------- Feestzaal ---------- */
-.feest{position:relative;border-radius:24px;overflow:hidden;color:#fff;isolation:isolate}
-.feest .bg{position:absolute;inset:0;z-index:0;background:
-   radial-gradient(120% 130% at 80% 10%, rgba(242,179,62,.5), transparent 55%),
-   linear-gradient(135deg,#1c140c,#0d2a27 120%)}
-.feest::after{content:"";position:absolute;inset:0;z-index:1;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.12) 1px, transparent 1.4px);background-size:16px 16px}
-.feest .inner{position:relative;z-index:3;display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;padding:clamp(1.8rem,4vw,3.2rem);align-items:center}
-.feest .eyebrow{color:var(--gold)}
-.feest h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:.7rem 0 1rem}
-.feest p{color:rgba(255,255,255,.85);max-width:44ch}
-.feest ul{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.55rem}
-.feest li{display:flex;gap:.55rem;align-items:center;font-weight:600}
-.feest li svg{width:18px;height:18px;stroke:var(--gold);flex:0 0 auto}
-.feest .cta-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px);border-radius:18px;padding:1.5rem;text-align:center}
-.feest .cta-card .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.6rem;margin-bottom:.3rem}
-.feest .cta-card p{color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:1.1rem}
-
-/* ---------- Reviews ---------- */
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
-.review{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;gap:.8rem}
-.review .stars{font-size:1.05rem}
-.review p{font-size:.98rem}
-.review .who{display:flex;align-items:center;gap:.7rem;margin-top:auto}
-.review .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:800;color:#241B10;background:var(--gold)}
-.review .who b{display:block;font-size:.95rem}
-.review .who span{font-size:.78rem;color:var(--ink-faint)}
-
-/* ---------- Practical / hours + contact ---------- */
-.practical{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.7rem;box-shadow:var(--shadow-soft)}
-.hours-table{width:100%;border-collapse:collapse;margin-top:.6rem}
-.hours-table td{padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.95rem}
-.hours-table tr:last-child td{border-bottom:none}
-.hours-table .day{font-weight:600}
-.hours-table .hrs{text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
-.hours-table tr.today{color:var(--gold-deep)}
-.hours-table tr.today .day::after{content:"vandaag";font-family:"Anton";font-size:.6rem;letter-spacing:.08em;margin-left:.5rem;background:var(--gold);color:#241B10;padding:.05rem .35rem;border-radius:4px;vertical-align:middle}
-.hours-table tr.today .hrs{color:var(--gold-deep);font-weight:700}
-.contact-row{display:flex;gap:.8rem;align-items:flex-start;padding:.7rem 0;border-bottom:1px dashed var(--line)}
-.contact-row:last-child{border-bottom:none}
-.contact-row .ci{width:40px;height:40px;flex:0 0 auto;border-radius:11px;background:var(--surface-2);display:grid;place-items:center;border:1px solid var(--line)}
-.contact-row .ci svg{width:20px;height:20px;stroke:var(--gold-deep)}
-.contact-row b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint)}
-.contact-row a,.contact-row span{font-weight:600;font-size:1.02rem}
-.map{margin-top:1.1rem;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;position:relative;background:#0d2a27}
-
-/* ---------- Footer ---------- */
-footer{position:relative;z-index:2;background:var(--ink);color:var(--paper);padding:3.2rem 0 2rem;margin-top:1rem}
-:root[data-theme="dark"] footer,
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer{background:#0d0a06}}
-footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem}
-footer h4{font-family:"Anton";font-weight:400;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;color:var(--gold);margin-bottom:1rem}
-footer .brand-f{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.3rem;margin-bottom:.9rem}
-footer .brand-f .mark{width:40px;height:40px}
-footer p,footer a,footer li{color:rgba(246,234,210,.75);font-size:.92rem}
-footer a:hover{color:var(--gold)}
-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
-footer .socials{display:flex;gap:.6rem;margin-top:1rem}
-footer .socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(246,234,210,.2);display:grid;place-items:center}
-footer .socials a:hover{background:var(--gold);border-color:var(--gold)}
-footer .socials svg{width:19px;height:19px}
-footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
-.footer-bottom{border-top:1px solid rgba(246,234,210,.15);margin-top:2.4rem;padding-top:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:rgba(246,234,210,.55)}
-.footer-bottom a{color:var(--gold)}
-
-/* ---------- Toast ---------- */
-.toast-wrap{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:90;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none}
-.toast{background:var(--ink);color:var(--paper);padding:.75rem 1.1rem;border-radius:999px;font-weight:600;font-size:.9rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.55rem;transform:translateY(20px) scale(.9);opacity:0;transition:all .35s cubic-bezier(.3,1.4,.5,1)}
-.toast.show{transform:none;opacity:1}
-.toast svg{width:18px;height:18px;stroke:var(--gold)}
-
-/* ---------- Reveal animation (guarded by .js so no-JS shows everything) ---------- */
-.reveal{transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
-.js .reveal{opacity:0;transform:translateY(26px)}
-.reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
-
-/* ---------- Mobile menu ---------- */
-.mobile-menu{position:fixed;inset:0;z-index:50;background:var(--paper);transform:translateY(-100%);transition:transform .4s cubic-bezier(.4,0,.1,1);display:flex;flex-direction:column;padding:5.5rem 8vw 2rem;gap:.4rem}
-.mobile-menu.show{transform:none}
-.mobile-menu a{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.8rem;padding:.6rem 0;border-bottom:1px solid var(--line);color:var(--ink)}
-.mobile-menu .m-close{position:absolute;top:1.3rem;right:8vw;width:46px;height:46px;border:1.5px solid var(--line);border-radius:50%;display:grid;place-items:center}
-
-/* ---------- Responsive ---------- */
-@media (max-width:960px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-art{order:-1;min-height:auto;margin-bottom:.5rem}
-  .cone-wrap{width:min(64%,280px)}
-  .usp-grid{grid-template-columns:repeat(2,1fr)}
-  .toppers{grid-template-columns:1fr 1fr}
-  .topper.big{grid-row:span 1;grid-column:span 2;min-height:260px}
-  .story{grid-template-columns:1fr}
-  .story-media{max-width:420px}
-  .feest .inner{grid-template-columns:1fr}
-  .reviews-grid{grid-template-columns:1fr}
-  .practical{grid-template-columns:1fr}
-  footer .grid{grid-template-columns:1fr 1fr}
-}
-@media (max-width:680px){
-  nav.links{display:none}
-  .hamburger{display:grid}
-  .items{grid-template-columns:1fr}
-  .usp-grid{grid-template-columns:1fr 1fr}
-  .toppers{grid-template-columns:1fr}
-  .topper.big{grid-column:span 1}
-  .hero-trust{gap:1rem}
-  .cat-nav{top:64px}
-  footer .grid{grid-template-columns:1fr}
-  .topbar .wrap{font-size:.74rem;gap:.5rem}
-}
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
-  .js .reveal{opacity:1 !important;transform:none !important}
-}
-</style>
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Frituur Madelyn","url":"https://www.frituurmadelyn.be/","inLanguage":"nl-BE"}
+</script>
 </head>
 <body>
-<script>document.documentElement.className += " js";</script>
+<a href="#main" class="skip">Naar de inhoud</a>
 
-<!-- ======================= TOP RIBBON ======================= -->
+<!-- ===================== TOPBAR ===================== -->
 <div class="topbar">
   <div class="wrap">
-    <span class="demo-chip">Demo</span>
-    <span>Vandaag: <b id="ribbon-status">open tot 22:00</b></span>
-    <span class="dot"></span>
-    <span>Afhalen · <b>Graethempoort 6, Borgloon</b></span>
-    <span class="dot"></span>
-    <span>Bel <b>012 74 20 24</b></span>
+    <span data-status-text>Openingsuren laden…</span>
+    <span class="sep" aria-hidden="true"></span>
+    <span>Graethempoort 6, <b>Borgloon</b></span>
+    <span class="sep" aria-hidden="true"></span>
+    <span>Bel <a href="tel:+3212742024"><b>012 74 20 24</b></a></span>
   </div>
 </div>
 
-<!-- ======================= NAV ======================= -->
+<!-- ===================== NAV ===================== -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="brand" aria-label="Frituur Madelyn — naar boven">
+    <a href="index.html" class="brand" aria-label="Frituur Madelyn — home">
       <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" fill="var(--gold)"/>
-        <path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" stroke="var(--ink)" stroke-width="1.5"/>
+        <path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/>
         <rect x="16" y="6" width="3.4" height="16" rx="1.6" fill="#F6EAD2" stroke="var(--ink)" stroke-width="1.2"/>
         <rect x="22.3" y="3" width="3.4" height="19" rx="1.6" fill="#F6EAD2" stroke="var(--ink)" stroke-width="1.2"/>
         <rect x="28.6" y="7" width="3.4" height="15" rx="1.6" fill="#F6EAD2" stroke="var(--ink)" stroke-width="1.2"/>
-        <path d="M13 24h22M14 30h20" stroke="var(--ink)" stroke-width="1.3" opacity=".35"/>
       </svg>
-      <span>Frituur&nbsp;Madelyn<small>Borgloon · sinds '82</small></span>
+      <span>Frituur&nbsp;Madelyn<small>Borgloon · Haspengouw</small></span>
     </a>
     <nav class="links" aria-label="Hoofdmenu">
-      <a href="#bestellen">Bestellen</a>
-      <a href="#toppers">Toppers</a>
-      <a href="#verhaal">Ons verhaal</a>
-      <a href="#feestzaal">Feestzaal</a>
-      <a href="#praktisch">Uren &amp; contact</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="menu.html">Menukaart</a>
+      <a href="over-ons.html">Ons verhaal</a>
+      <a href="feestzaal.html">Feestzaal</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="icon-btn" id="theme-toggle" aria-label="Wissel donker/licht thema" title="Donker / licht">
-        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <button class="icon-btn" data-theme-toggle aria-label="Wissel tussen donker en licht thema">
+        <svg data-theme-icon viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></svg>
       </button>
-      <a href="#bestellen" class="btn btn-gold" style="padding:.7rem 1.15rem">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
-        Bestel &amp; haal af
+      <a href="tel:+3212742024" class="btn btn-gold" style="padding:.7rem 1.15rem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Bel ons
       </a>
-      <button class="icon-btn cart-btn" id="cart-open" aria-label="Open winkelmandje">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-        <span class="cart-count" id="cart-count">0</span>
-      </button>
       <button class="icon-btn hamburger" id="ham" aria-label="Menu openen">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -578,36 +118,38 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
   </div>
 </header>
 
-<!-- mobile menu -->
 <div class="mobile-menu" id="mobile-menu">
   <button class="m-close" id="m-close" aria-label="Menu sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  <a href="#bestellen">Bestellen</a>
-  <a href="#toppers">Toppers</a>
-  <a href="#verhaal">Ons verhaal</a>
-  <a href="#feestzaal">Feestzaal</a>
-  <a href="#praktisch">Uren &amp; contact</a>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menukaart</a>
+  <a href="over-ons.html">Ons verhaal</a>
+  <a href="feestzaal.html">Feestzaal</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-cta">
+    <a href="tel:+3212742024" class="btn btn-gold btn-lg">Bel 012 74 20 24</a>
+  </div>
 </div>
 
-<span id="top"></span>
+<main id="main">
 
-<!-- ======================= HERO ======================= -->
-<section class="hero section" style="padding-top:2.2rem">
-  <div class="hero-glow"></div>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="hero-copy">
-      <span class="status-pill" id="hero-status"><span class="status-dot"></span><span class="txt">Openingsuren laden…</span></span>
+    <div>
+      <span class="status-pill" data-status-pill><span class="status-dot" aria-hidden="true"></span><span class="txt">Openingsuren laden…</span></span>
       <h1>De echte <span class="u g">Belgische friet</span><br>van <span class="g">Borgloon</span>.</h1>
-      <p class="hero-sub">Verse aardappelen, met de hand geschild en <b>dubbel gebakken</b> in echt ossewit. Al meer dan veertig jaar dé frituur aan de Graethempoort — nu ook online te bestellen om af te halen.</p>
+      <p class="hero-sub">Verse aardappelen, met de hand geschild en <strong>dubbel gebakken</strong> in echt ossewit. Al jaren dé frituur aan de Graethempoort, in het hart van Haspengouw.</p>
       <div class="hero-cta">
-        <a href="#bestellen" class="btn btn-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
-          Bestel om af te halen
+        <a href="menu.html" class="btn btn-gold btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+          Bekijk de menukaart
         </a>
-        <a href="#toppers" class="btn btn-ghost">Bekijk de kaart</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Openingsuren &amp; route</a>
       </div>
       <div class="hero-trust">
         <div class="trust-item"><b class="stars">★★★★★</b><span>Geliefd in Haspengouw</span></div>
-        <div class="trust-item"><b>~15 min</b><span>klaar om af te halen</span></div>
+        <div class="trust-item"><b>Vers geschild</b><span>elke dag opnieuw</span></div>
         <div class="trust-item"><b>100% ossewit</b><span>dubbel gebakken</span></div>
       </div>
     </div>
@@ -615,13 +157,11 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
     <div class="hero-art" aria-hidden="true">
       <div class="steam"><span></span><span></span><span></span><span></span></div>
       <div class="cone-wrap">
-        <!-- puntzak (paper cone of fries) -->
         <svg viewBox="0 0 300 340" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="fry" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7CB63"/><stop offset="1" stop-color="#D98E1E"/></linearGradient>
             <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6EFE0"/><stop offset="1" stop-color="#E4D3B0"/></linearGradient>
           </defs>
-          <!-- fries poking out -->
           <g stroke="#8a5a12" stroke-width="2">
             <rect x="112" y="40" width="20" height="150" rx="7" fill="url(#fry)" transform="rotate(-9 122 110)"/>
             <rect x="140" y="26" width="21" height="168" rx="7" fill="url(#fry)" transform="rotate(-1 150 110)"/>
@@ -629,21 +169,14 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
             <rect x="128" y="52" width="18" height="142" rx="7" fill="url(#fry)" transform="rotate(4 137 120)"/>
             <rect x="156" y="46" width="18" height="150" rx="7" fill="url(#fry)" transform="rotate(-6 165 120)"/>
           </g>
-          <!-- cone -->
           <path d="M60 150 L240 150 L172 330 a26 20 0 0 1-44 0 Z" fill="url(#paper)" stroke="#c9a86a" stroke-width="2.5"/>
-          <path d="M60 150 L240 150 L172 330 a26 20 0 0 1-44 0 Z" fill="none" stroke="#b98e3e" stroke-width="1" opacity=".5" stroke-dasharray="2 7"/>
-          <!-- red/white stripes on cone -->
           <g fill="#C63A22" opacity=".9">
-            <path d="M78 168 h150 l-4 12 H82 Z"/>
-            <path d="M92 200 h122 l-4 12 H96 Z"/>
-            <path d="M106 232 h94 l-4 12 H110 Z"/>
+            <path d="M78 168 h150 l-4 12 H82 Z"/><path d="M92 200 h122 l-4 12 H96 Z"/><path d="M106 232 h94 l-4 12 H110 Z"/>
           </g>
-          <!-- mayo dollop -->
           <path d="M118 150c8-14 56-14 64 0-4 10-60 10-64 0Z" fill="#FBF3DD" stroke="#E4D3B0" stroke-width="1.5"/>
           <ellipse cx="150" cy="146" rx="26" ry="8" fill="#FEFBF0"/>
         </svg>
       </div>
-      <!-- rotating badge -->
       <svg class="badge-spin" viewBox="0 0 120 120">
         <circle class="disc" cx="60" cy="60" r="58"/>
         <circle cx="60" cy="60" r="42" fill="none" stroke="#241B10" stroke-width="1.5" opacity=".4"/>
@@ -652,206 +185,175 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
         <text x="60" y="56" text-anchor="middle" font-family="Anton" font-size="22" fill="#241B10">100%</text>
         <text x="60" y="74" text-anchor="middle" font-family="Anton" font-size="11" fill="#241B10" letter-spacing="1">OSSEWIT</text>
       </svg>
-      <div class="floaty a"><span class="em">🥔</span> vers geschild</div>
-      <div class="floaty b"><span class="em">⭐</span> topper: stoofvlees</div>
+      <div class="floaty a"><span>🥔</span> vers geschild</div>
+      <div class="floaty b"><span>⭐</span> topper: stoofvlees</div>
     </div>
   </div>
 </section>
 
-<!-- ======================= MARQUEE ======================= -->
+<!-- ===================== MARQUEE ===================== -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Frietjes <b>·</b> Frikandel speciaal <span class="star">✦</span> Bicky Burger <b>·</b> Mitraillette <span class="star">✦</span> Vlaamse stoofvlees <b>·</b> Loempia <span class="star">✦</span> Kaaskroket <b>·</b> Smoutebollen <span class="star">✦</span> Cervela <b>·</b> Curryworst <span class="star">✦</span>&nbsp;</span>
-    <span>Frietjes <b>·</b> Frikandel speciaal <span class="star">✦</span> Bicky Burger <b>·</b> Mitraillette <span class="star">✦</span> Vlaamse stoofvlees <b>·</b> Loempia <span class="star">✦</span> Kaaskroket <b>·</b> Smoutebollen <span class="star">✦</span> Cervela <b>·</b> Curryworst <span class="star">✦</span>&nbsp;</span>
+    <span>Frietjes <i>·</i> Frikandel speciaal <i>✦</i> Bicky Burger <i>·</i> Mitraillette <i>✦</i> Vlaamse stoofvlees <i>·</i> Loempia <i>✦</i> Kaaskroket <i>·</i> Smoutebollen <i>✦</i> Cervela <i>·</i> Curryworst <i>✦</i>&nbsp;</span>
+    <span>Frietjes <i>·</i> Frikandel speciaal <i>✦</i> Bicky Burger <i>·</i> Mitraillette <i>✦</i> Vlaamse stoofvlees <i>·</i> Loempia <i>✦</i> Kaaskroket <i>·</i> Smoutebollen <i>✦</i> Cervela <i>·</i> Curryworst <i>✦</i>&nbsp;</span>
   </div>
 </div>
 
-<!-- ======================= USP ======================= -->
+<!-- ===================== USP ===================== -->
 <section class="section">
   <div class="wrap">
     <span class="eyebrow reveal">Waarom Madelyn</span>
-    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,3rem);margin-top:.6rem;max-width:16ch">Geen gewone frituur. <span style="color:var(--gold-deep)">Een Loonse traditie.</span></h2>
-    <div class="usp-grid">
+    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,3rem);margin-top:.6rem;max-width:17ch">Geen gewone frituur. <span style="color:var(--gold-deep)">Een Loonse traditie.</span></h2>
+    <div class="grid g-4" style="margin-top:2.2rem">
       <article class="usp reveal d1">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 6 5 9 5 13a7 7 0 0 0 14 0c0-4-2-7-7-11Z"/><path d="M12 22v-6"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2C7 6 5 9 5 13a7 7 0 0 0 14 0c0-4-2-7-7-11Z"/><path d="M12 22v-6"/></svg></div>
         <h3>Elke dag vers geschild</h3>
         <p>Echte aardappelen uit de streek — geen diepvries, geen poeder. 's Morgens geschild, 's middags gebakken.</p>
       </article>
       <article class="usp reveal d2">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9M18 20V9M4 9l8-5 8 5"/><path d="M9 20v-5h6v5"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9M18 20V9M4 9l8-5 8 5"/><path d="M9 20v-5h6v5"/></svg></div>
         <h3>Dubbel gebakken</h3>
-        <p>De echte Belgische methode in ossewit: eerst blancheren, dan afbakken. Goudbruin en krokant, zacht van binnen.</p>
+        <p>De echte Belgische methode in ossewit: eerst blancheren, dan afbakken. Goudbruin en krokant, zacht vanbinnen.</p>
       </article>
       <article class="usp reveal d3">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14l-1 8H6l-1-8Z"/><path d="M8 12V8a4 4 0 0 1 8 0v4"/><path d="M9 5c0-1.5 6-1.5 6 0"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12h14l-1 8H6l-1-8Z"/><path d="M8 12V8a4 4 0 0 1 8 0v4"/></svg></div>
         <h3>Huisgemaakte stoofvlees</h3>
         <p>Onze Vlaamse stoofvlees pruttelt uren op een basis van bruin bier. Al jaren de topper van 't huis.</p>
       </article>
       <article class="usp reveal d4">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
         <h3>Aan de Graethempoort</h3>
-        <p>Al meer dan 40 jaar een vaste waarde in Borgloon, in het hart van fruitstreek Haspengouw.</p>
+        <p>Een vaste waarde in Borgloon, in het hart van fruitstreek Haspengouw. Vlot te bereiken en parkeren voor de deur.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ======================= TOPPERS ======================= -->
-<section class="section" id="toppers" style="padding-top:0">
+<!-- ===================== TOPPERS ===================== -->
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
       <div>
         <span class="eyebrow reveal">De klassiekers</span>
         <h2 class="reveal">Onze toppers <span class="script" style="color:var(--gold-deep);font-size:1.1em">van 't huis</span></h2>
-        <p class="reveal">De bestellingen die het vaakst over de toonbank gaan. Voeg ze meteen toe aan je mandje.</p>
+        <p class="reveal">De bestellingen die het vaakst over de toonbank gaan.</p>
       </div>
-      <a href="#bestellen" class="btn btn-ghost reveal">Volledige kaart →</a>
+      <a href="menu.html" class="btn btn-ghost reveal">Volledige kaart →</a>
     </div>
-    <div class="toppers reveal">
-      <!-- big -->
-      <article class="topper big">
-        <div class="photo">
-          <div class="art" data-art="stoofvlees"></div>
-          <img alt="Grote friet met huisgemaakte Vlaamse stoofvlees" loading="lazy"
-               src="https://images.unsplash.com/photo-1630431341973-02e1b662ec35?w=900&q=80&auto=format&fit=crop">
-        </div>
+
+    <div class="picks reveal">
+      <article class="pick big">
+        <figure class="shot">
+          <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🍟</div></div>
+          <img src="assets/img/stoofvlees-friet.jpg" alt="Grote portie verse friet met huisgemaakte Vlaamse stoofvlees" loading="lazy" width="900" height="900">
+        </figure>
         <div class="body">
-          <h3>Grote friet met stoofvlees</h3>
-          <p class="desc">Onze goudbruine frietjes overgoten met huisgemaakte Vlaamse stoofvlees. Het bord waar Madelyn om bekend staat.</p>
-          <div class="row">
-            <span class="price">€ 12,50</span>
-            <button class="add-mini" data-add="stoof-friet">+ In mandje</button>
-          </div>
+          <h3>Friet met stoofvlees</h3>
+          <p class="d">Onze goudbruine frietjes overgoten met huisgemaakte Vlaamse stoofvlees. Het bord waar Madelyn om bekend staat.</p>
+          <p class="p">€ 12,50</p>
         </div>
       </article>
-      <article class="topper">
-        <div class="photo"><div class="art" data-art="burger"></div>
-          <img alt="Bicky Burger" loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80&auto=format&fit=crop"></div>
-        <div class="body">
-          <h3>Bicky Burger</h3>
-          <p class="desc">De Belgische cultburger met bicky dressing, ui &amp; augurk.</p>
-          <div class="row"><span class="price">€ 3,80</span><button class="add-mini" data-add="bicky">+</button></div>
-        </div>
+      <article class="pick">
+        <figure class="shot">
+          <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🍔</div></div>
+          <img src="assets/img/bicky-burger.jpg" alt="Bicky Burger met dressing, ui en augurk" loading="lazy" width="700" height="500">
+        </figure>
+        <div class="body"><h3>Bicky Burger</h3><p class="d">De Belgische cultburger.</p><p class="p">€ 3,80</p></div>
       </article>
-      <article class="topper">
-        <div class="photo"><div class="art" data-art="snack"></div>
-          <img alt="Frikandel speciaal" loading="lazy" src="https://images.unsplash.com/photo-1619881589192-42d3f2e0f0a1?w=700&q=80&auto=format&fit=crop"></div>
-        <div class="body">
-          <h3>Frikandel speciaal</h3>
-          <p class="desc">Gehalveerd, met mayonaise, curry &amp; verse ui.</p>
-          <div class="row"><span class="price">€ 3,20</span><button class="add-mini" data-add="frik-spec">+</button></div>
-        </div>
+      <article class="pick">
+        <figure class="shot">
+          <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🌭</div></div>
+          <img src="assets/img/frikandel-speciaal.jpg" alt="Frikandel speciaal met mayonaise, curry en ui" loading="lazy" width="700" height="500">
+        </figure>
+        <div class="body"><h3>Frikandel speciaal</h3><p class="d">Met mayonaise, curry &amp; verse ui.</p><p class="p">€ 3,20</p></div>
       </article>
-      <article class="topper">
-        <div class="photo"><div class="art" data-art="mitraillette"></div>
-          <img alt="Mitraillette" loading="lazy" src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=700&q=80&auto=format&fit=crop"></div>
-        <div class="body">
-          <h3>Mitraillette</h3>
-          <p class="desc">Stokbrood met snack naar keuze, frietjes &amp; saus.</p>
-          <div class="row"><span class="price">€ 6,50</span><button class="add-mini" data-add="mitr">Kies</button></div>
-        </div>
+      <article class="pick">
+        <figure class="shot">
+          <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🥖</div></div>
+          <img src="assets/img/mitraillette.jpg" alt="Mitraillette: stokbrood met snack, friet en saus" loading="lazy" width="700" height="500">
+        </figure>
+        <div class="body"><h3>Mitraillette</h3><p class="d">Stokbrood, snack, friet &amp; saus.</p><p class="p">€ 6,50</p></div>
       </article>
-      <article class="topper">
-        <div class="photo"><div class="art" data-art="loempia"></div>
-          <img alt="Loempia" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop"></div>
-        <div class="body">
-          <h3>Grote loempia</h3>
-          <p class="desc">Krokant gebakken, met zoetzure saus.</p>
-          <div class="row"><span class="price">€ 3,20</span><button class="add-mini" data-add="loempia">+</button></div>
-        </div>
+      <article class="pick">
+        <figure class="shot">
+          <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🥟</div></div>
+          <img src="assets/img/loempia.jpg" alt="Grote krokant gebakken loempia met zoetzure saus" loading="lazy" width="700" height="500">
+        </figure>
+        <div class="body"><h3>Grote loempia</h3><p class="d">Krokant, met zoetzure saus.</p><p class="p">€ 3,20</p></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ======================= ORDER / MENU ======================= -->
-<section class="order section" id="bestellen">
+<!-- ===================== CATEGORIEËN ===================== -->
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="eyebrow reveal">Bestellen &amp; afhalen</span>
-        <h2 class="reveal">Stel je bestelling samen</h2>
-        <p class="reveal">Kies wat je wil, geef je afhaaltijd door en betaal aan de toonbank. Je mandje verschijnt rechts als een echte bestelbon.</p>
+        <span class="eyebrow reveal">Onze kaart</span>
+        <h2 class="reveal">Waar heb je zin in?</h2>
       </div>
     </div>
-
-    <!-- category nav -->
-    <div class="cat-nav" id="cat-nav" role="tablist" aria-label="Menucategorieën"></div>
-
-    <!-- menu renders here -->
-    <div id="menu-root"></div>
-
-    <div class="order-help reveal">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg><span><b>Klaar in ±15 min.</b> Je kiest zelf je afhaaltijd in het mandje.</span></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M7 15h4M5 6h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg><span><b>Betalen aan de toonbank</b> — cash of payconiq bij afhaling.</span></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Afhalen:</b> Graethempoort 6, 3840 Borgloon.</span></div>
+    <div class="cats reveal">
+      <a class="cat" href="menu.html#frietjes"><span class="em" aria-hidden="true">🍟</span><span>Frietjes<small>vers &amp; dubbel gebakken</small></span></a>
+      <a class="cat" href="menu.html#snacks"><span class="em" aria-hidden="true">🌭</span><span>Snacks<small>16 klassiekers</small></span></a>
+      <a class="cat" href="menu.html#burgers"><span class="em" aria-hidden="true">🍔</span><span>Burgers<small>van hamburger tot bicky</small></span></a>
+      <a class="cat" href="menu.html#broodjes"><span class="em" aria-hidden="true">🥖</span><span>Broodjes<small>&amp; mitraillette</small></span></a>
+      <a class="cat" href="menu.html#specialiteiten"><span class="em" aria-hidden="true">🍲</span><span>Stoofpotjes<small>huisgemaakt</small></span></a>
+      <a class="cat" href="menu.html#kids"><span class="em" aria-hidden="true">🧒</span><span>Kindermenu<small>met verrassing</small></span></a>
+      <a class="cat" href="menu.html#sauzen"><span class="em" aria-hidden="true">🥫</span><span>Sauzen<small>13 soorten</small></span></a>
+      <a class="cat" href="menu.html#zoet"><span class="em" aria-hidden="true">🍨</span><span>Zoet &amp; ijs<small>huisgemaakt ijs</small></span></a>
     </div>
   </div>
 </section>
 
-<!-- ======================= STORY ======================= -->
-<section class="section" id="verhaal">
-  <div class="wrap story">
-    <div class="story-media reveal">
-      <div class="photo" style="aspect-ratio:4/5">
-        <div class="art" data-art="shop"></div>
-        <img alt="Frituur Madelyn aan de Graethempoort in Borgloon" loading="lazy"
-             src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=800&q=80&auto=format&fit=crop">
-        <span class="tag">sinds '82</span>
-      </div>
-      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-        <circle class="disc" cx="60" cy="60" r="56"/>
-        <path id="stampPath" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" fill="none"/>
-        <text font-size="11"><textPath href="#stampPath" startOffset="0">FRITUUR MADELYN · BORGLOON · HASPENGOUW · </textPath></text>
-        <text x="60" y="66" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="26" fill="var(--gold-deep)">écht</text>
-      </svg>
-    </div>
-    <div class="story-copy">
+<!-- ===================== VERHAAL TEASER ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap grid g-2" style="gap:clamp(1.5rem,4vw,3.5rem);align-items:center">
+    <figure class="shot shot-4x5 reveal">
+      <div class="art" aria-hidden="true"><div class="dots"></div><div class="glyph">🏪</div></div>
+      <img src="assets/img/frituur-madelyn-buitenkant.jpg" alt="Frituur Madelyn aan de Graethempoort in Borgloon" loading="lazy" width="800" height="1000">
+    </figure>
+    <div>
       <span class="eyebrow reveal">Ons verhaal</span>
-      <h2 class="reveal">Een frituur met een naam en een verhaal</h2>
-      <p class="reveal">Frituur Madelyn is al meer dan veertig jaar een begrip in Borgloon. Wat begon als een klein kraam aan de Graethempoort — de oude stadspoort van Loon — groeide uit tot de plek waar generaties Loonaars hun vrijdagavondfriet halen.</p>
-      <p class="reveal">Nog altijd draait alles om hetzelfde principe: verse aardappelen, met de hand geschild, dubbel gebakken in echt ossewit. De stoofvlees, de currysaus en het ijs? Allemaal huisgemaakt. Geen toeters en bellen — gewoon eerlijke friet zoals het hoort.</p>
-      <p class="script sig reveal">— de familie Madelyn</p>
-      <div class="facts reveal">
-        <div><b>40+</b><span>jaar aan de Graethempoort</span></div>
-        <div><b>100%</b><span>vers &amp; huisgemaakt</span></div>
-        <div><b>1</b><span>gouden regel: dubbel bakken</span></div>
-      </div>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,3rem);margin:.6rem 0 1rem">Een frituur met een naam en een verhaal</h2>
+      <p class="reveal muted" style="margin-bottom:1rem">Frituur Madelyn is een begrip in Borgloon. Wat begon als een kleine zaak aan de Graethempoort — de oude stadspoort van Loon — groeide uit tot de plek waar generaties Loonaars hun vrijdagavondfriet halen.</p>
+      <p class="reveal muted" style="margin-bottom:1.4rem">Nog altijd draait alles om hetzelfde principe: verse aardappelen, met de hand geschild, dubbel gebakken in echt ossewit. De stoofvlees, de currysaus en het ijs? Allemaal huisgemaakt.</p>
+      <a href="over-ons.html" class="btn btn-ghost reveal">Lees ons verhaal →</a>
     </div>
   </div>
 </section>
 
-<!-- ======================= FEESTZAAL ======================= -->
-<section class="section" id="feestzaal" style="padding-top:0">
+<!-- ===================== FEESTZAAL ===================== -->
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="feest reveal">
-      <div class="bg"></div>
+      <div class="bg" aria-hidden="true"></div>
       <div class="inner">
         <div>
           <span class="eyebrow">Feestzaal Graethempoort</span>
           <h2>Iets te vieren? Onze zaal staat klaar.</h2>
           <p>Naast de frituur verwelkomen we je ook in onze eigen feestzaal aan de Graethempoort. Van communiefeest tot verjaardag, koffietafel of personeelsfeest — wij zorgen voor de friet, de snacks en de sfeer.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Communie, lentefeest &amp; verjaardagen</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Koffietafels &amp; familiefeesten</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Frietbuffet op maat, ook voor grote groepen</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg> Communie, lentefeest &amp; verjaardagen</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg> Koffietafels &amp; familiefeesten</li>
+            <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg> Frietbuffet op maat, ook voor grote groepen</li>
           </ul>
         </div>
         <div class="cta-card">
           <div class="big">Reserveer je datum</div>
           <p>Vraag vrijblijvend de mogelijkheden en menu's op.</p>
-          <a href="tel:+3212742024" class="btn btn-gold" style="width:100%;justify-content:center">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
-            012 74 20 24
-          </a>
-          <p style="margin-top:.8rem;margin-bottom:0;font-size:.8rem">of mail <a href="mailto:info@frituurmadelyn.be" style="color:var(--gold)">info@frituurmadelyn.be</a></p>
+          <a href="tel:+3212742024" class="btn btn-gold" style="width:100%">012 74 20 24</a>
+          <p style="margin-top:.8rem;margin-bottom:0;font-size:.82rem">of <a href="feestzaal.html" style="color:var(--gold);text-decoration:underline">bekijk de feestzaal</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======================= REVIEWS ======================= -->
+<!-- ===================== REVIEWS =====================
+     LET OP: dit zijn VOORBEELD-reviews. Vervang ze vóór livegang door
+     echte Google-reviews (of verwijder de sectie). Zie README.md. -->
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
@@ -860,28 +362,31 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
         <h2 class="reveal">Loonaars zijn duidelijk</h2>
       </div>
     </div>
-    <div class="reviews-grid">
-      <article class="review reveal d1">
-        <span class="stars">★★★★★</span>
-        <p>"De beste frietjes van Borgloon, zonder discussie. Krokant vanbuiten, zacht vanbinnen en die stoofvlees… wij rijden er speciaal voor om."</p>
-        <div class="who"><div class="av">K</div><div><b>Kevin D.</b><span>Borgloon</span></div></div>
+    <div class="grid g-3">
+      <article class="review placeholder reveal d1">
+        <span class="ph-chip">Voorbeeld — vervangen</span>
+        <span class="stars" aria-label="5 op 5">★★★★★</span>
+        <p>Plaats hier een echte Google-review over de frietjes en de stoofvlees.</p>
+        <div class="who"><div class="av" aria-hidden="true">?</div><div><b>Naam klant</b><span>Borgloon</span></div></div>
       </article>
-      <article class="review reveal d2">
-        <span class="stars">★★★★★</span>
-        <p>"Altijd vriendelijk en alles vers. De mitraillette is gigantisch en de porties zitten goed. Onze vaste stek op vrijdagavond."</p>
-        <div class="who"><div class="av">N</div><div><b>Nathalie V.</b><span>Kerniel</span></div></div>
+      <article class="review placeholder reveal d2">
+        <span class="ph-chip">Voorbeeld — vervangen</span>
+        <span class="stars" aria-label="5 op 5">★★★★★</span>
+        <p>Plaats hier een echte Google-review over de service en de porties.</p>
+        <div class="who"><div class="av" aria-hidden="true">?</div><div><b>Naam klant</b><span>Haspengouw</span></div></div>
       </article>
-      <article class="review reveal d3">
-        <span class="stars">★★★★★</span>
-        <p>"Voor de communie van onze dochter alles laten verzorgen in de feestzaal. Dik in orde, iedereen was tevreden. Een aanrader!"</p>
-        <div class="who"><div class="av">M</div><div><b>Marc H.</b><span>Tongeren</span></div></div>
+      <article class="review placeholder reveal d3">
+        <span class="ph-chip">Voorbeeld — vervangen</span>
+        <span class="stars" aria-label="5 op 5">★★★★★</span>
+        <p>Plaats hier een echte review over een feest in de Feestzaal Graethempoort.</p>
+        <div class="who"><div class="av" aria-hidden="true">?</div><div><b>Naam klant</b><span>Tongeren</span></div></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ======================= PRACTICAL ======================= -->
-<section class="section" id="praktisch" style="padding-top:0">
+<!-- ===================== PRAKTISCH ===================== -->
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -889,78 +394,58 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
         <h2 class="reveal">Openingsuren &amp; contact</h2>
       </div>
     </div>
-    <div class="practical">
+    <div class="grid g-2">
       <div class="card reveal">
-        <h3 style="font-size:1.3rem;margin-bottom:.3rem">Openingsuren</h3>
-        <p style="color:var(--ink-soft);font-size:.9rem">Doorlopend open tijdens de dienst — keuken sluit 15 min voor sluitingstijd.</p>
-        <table class="hours-table" id="hours-table"></table>
+        <h3 style="font-size:1.25rem;margin-bottom:.3rem">Openingsuren</h3>
+        <p class="muted" style="font-size:.9rem">De keuken sluit een kwartier voor sluitingstijd.</p>
+        <table class="hours" data-hours-table></table>
       </div>
       <div class="card reveal d1">
-        <h3 style="font-size:1.3rem;margin-bottom:.6rem">Vind ons</h3>
-        <div class="contact-row">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3 style="font-size:1.25rem;margin-bottom:.6rem">Vind ons</h3>
+        <div class="crow">
+          <div class="ci"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
           <div><b>Adres</b><span>Graethempoort 6, 3840 Borgloon</span></div>
         </div>
-        <div class="contact-row">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <div class="crow">
+          <div class="ci"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
           <div><b>Telefoon</b><a href="tel:+3212742024">012 74 20 24</a></div>
         </div>
-        <div class="contact-row">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div class="crow">
+          <div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
           <div><b>E-mail</b><a href="mailto:info@frituurmadelyn.be">info@frituurmadelyn.be</a></div>
         </div>
-        <!-- stylised map -->
-        <div class="map" aria-label="Kaart van Borgloon centrum">
-          <svg viewBox="0 0 400 225" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-            <rect width="400" height="225" fill="#0e2a27"/>
-            <g stroke="#1c4b45" stroke-width="10" fill="none" stroke-linecap="round">
-              <path d="M-10 70 L410 100"/><path d="M60 -10 L120 240"/><path d="M-10 170 L410 150"/><path d="M260 -10 L320 240"/>
-            </g>
-            <g stroke="#153935" stroke-width="4" fill="none">
-              <path d="M-10 120 L410 128"/><path d="M180 -10 L210 240"/>
-            </g>
-            <!-- orchards (Haspengouw) -->
-            <g fill="#1f5a3a"><circle cx="40" cy="200" r="9"/><circle cx="62" cy="205" r="7"/><circle cx="360" cy="40" r="9"/><circle cx="380" cy="55" r="7"/><circle cx="340" cy="52" r="6"/></g>
-            <!-- pin -->
-            <g transform="translate(205 108)">
-              <ellipse cx="0" cy="26" rx="14" ry="4" fill="rgba(0,0,0,.35)"/>
-              <path d="M0 24C-9 12-14 8-14 0a14 14 0 0 1 28 0c0 8-5 12-14 24Z" fill="#EDA92B" stroke="#241B10" stroke-width="1.5"/>
-              <circle cx="0" cy="0" r="5" fill="#241B10"/>
-            </g>
-            <text x="205" y="150" text-anchor="middle" font-family="Anton" font-size="12" fill="#F6EAD2" letter-spacing="1">GRAETHEMPOORT 6</text>
-            <text x="16" y="30" font-family="Anton" font-size="11" fill="#5f8f70" letter-spacing="1">BORGLOON · HASPENGOUW</text>
-          </svg>
-        </div>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:1rem">Route &amp; kaart →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======================= FOOTER ======================= -->
-<footer>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
   <div class="wrap">
-    <div class="grid">
+    <div class="cols">
       <div>
         <div class="brand-f">
           <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" fill="var(--gold)" stroke="#F6EAD2" stroke-width="1.2"/>
+            <path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" fill="#EDA92B" stroke="#F6EAD2" stroke-width="1.2"/>
             <rect x="16" y="6" width="3.4" height="16" rx="1.6" fill="#F6EAD2"/><rect x="22.3" y="3" width="3.4" height="19" rx="1.6" fill="#F6EAD2"/><rect x="28.6" y="7" width="3.4" height="15" rx="1.6" fill="#F6EAD2"/>
           </svg>
           Frituur Madelyn
         </div>
         <p>De echte Belgische friet aan de Graethempoort in Borgloon. Vers geschild, dubbel gebakken, met liefde voor Haspengouw.</p>
         <div class="socials">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/p/Madelyn-Frituur-Borgloon-100049059024916/" aria-label="Frituur Madelyn op Facebook" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
         </div>
       </div>
       <div>
         <h4>Menu</h4>
         <ul>
-          <li><a href="#bestellen">Bestellen &amp; afhalen</a></li>
-          <li><a href="#toppers">Onze toppers</a></li>
-          <li><a href="#verhaal">Ons verhaal</a></li>
-          <li><a href="#feestzaal">Feestzaal Graethempoort</a></li>
+          <li><a href="menu.html">Menukaart</a></li>
+          <li><a href="over-ons.html">Ons verhaal</a></li>
+          <li><a href="feestzaal.html">Feestzaal</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -972,537 +457,23 @@ footer .socials a:hover svg{stroke:#241B10;fill:#241B10}
           <li><a href="mailto:info@frituurmadelyn.be">info@frituurmadelyn.be</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Open</h4>
+        <ul>
+          <li>Ma — gesloten</li>
+          <li>Di–Do — 11–14 &amp; 16.30–22</li>
+          <li>Vr–Za — 11–14 &amp; 16.30–23</li>
+          <li>Zo — 11–14 &amp; 16.30–22</li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Frituur Madelyn · Borgloon — alle rechten voorbehouden.</span>
-      <span>Demo-website &amp; webdesign door <a href="#">EM Launchpad</a> · voorbeeld, geen live bestellingen.</span>
+    <div class="foot-bottom">
+      <span>© <span data-year></span> Frituur Madelyn · Borgloon</span>
+      <span>Website door <a href="#">EM Launchpad</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ======================= CART DRAWER ======================= -->
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Winkelmandje" aria-hidden="true">
-  <div class="d-head">
-    <svg class="logo" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 18h30l-3.2 22.5a3 3 0 0 1-3 2.5H15.2a3 3 0 0 1-3-2.5L9 18Z" fill="#EDA92B" stroke="#2b2114" stroke-width="1.4"/><rect x="16" y="6" width="3.4" height="16" rx="1.6" fill="#fff" stroke="#2b2114"/><rect x="22.3" y="3" width="3.4" height="19" rx="1.6" fill="#fff" stroke="#2b2114"/><rect x="28.6" y="7" width="3.4" height="15" rx="1.6" fill="#fff" stroke="#2b2114"/></svg>
-    <div><h3>Jouw bestelbon</h3><small>Frituur Madelyn · afhalen</small></div>
-    <button class="d-close" id="d-close" aria-label="Mandje sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  </div>
-  <div class="receipt-meta">
-    <span>BON&nbsp;#<span id="bonnr">—</span></span>
-    <span>Graethempoort 6, Borgloon</span>
-  </div>
-  <div class="d-body" id="d-body"><!-- lines --></div>
-  <div class="d-foot" id="d-foot" hidden>
-    <div class="totals" id="totals"></div>
-    <div class="two">
-      <div class="fld"><label for="cust-name">Naam</label><input id="cust-name" type="text" placeholder="Voornaam" autocomplete="given-name"></div>
-      <div class="fld"><label for="cust-tel">Telefoon</label><input id="cust-tel" type="tel" placeholder="0470 …" autocomplete="tel"></div>
-    </div>
-    <div class="fld"><label for="pickup-time">Afhaaltijd</label><select id="pickup-time"></select></div>
-    <div class="fld"><label for="cust-note">Opmerking (optioneel)</label><textarea id="cust-note" rows="2" placeholder="Bv. veel currysaus, weinig zout…"></textarea></div>
-    <button class="btn btn-gold place" id="place-order">Plaats bestelling · afhalen</button>
-    <div class="min-note" id="min-note"></div>
-  </div>
-</aside>
-
-<!-- ======================= OPTIONS MODAL ======================= -->
-<div class="modal-back" id="opt-modal">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="opt-title">
-    <div class="modal-h"><h3 id="opt-title">—</h3><p id="opt-desc"></p></div>
-    <div id="opt-groups"></div>
-    <div class="modal-f">
-      <div class="qty"><button id="opt-minus" aria-label="Minder">−</button><span id="opt-qty">1</span><button id="opt-plus" aria-label="Meer">+</button></div>
-      <button class="btn btn-gold" id="opt-add" style="flex:1;justify-content:center">Toevoegen · <span id="opt-price">€ 0,00</span></button>
-    </div>
-  </div>
-</div>
-
-<!-- ======================= CONFIRM MODAL ======================= -->
-<div class="modal-back" id="confirm-modal">
-  <div class="modal confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
-    <div class="kassabon">
-      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
-      <h3 id="confirm-title">Bedankt, <span id="conf-name">smakelijk</span>!</h3>
-      <div class="ordernr">BESTELLING #<span id="conf-nr">—</span></div>
-      <div class="pickup"><div>Klaar om af te halen om</div><div class="t" id="conf-time">—</div><div style="font-size:.82rem;color:var(--ink-soft)">Graethempoort 6, 3840 Borgloon</div></div>
-      <div class="k-list" id="conf-list"></div>
-      <div style="display:flex;justify-content:space-between;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.2rem"><span>Te betalen</span><span id="conf-total">—</span></div>
-      <p style="font-size:.8rem;color:var(--ink-faint);margin:1rem 0 .2rem">Dit is een <b>demo</b> — er wordt niets betaald of doorgestuurd. In het echt bevestigt de frituur je bestelling telefonisch.</p>
-    </div>
-    <div class="modal-f" style="justify-content:center">
-      <button class="btn btn-ghost" id="conf-close">Sluiten</button>
-      <button class="btn btn-gold" id="conf-again">Nieuwe bestelling</button>
-    </div>
-  </div>
-</div>
-
-<div class="toast-wrap" id="toast-wrap" aria-live="polite"></div>
-
-<script>
-/* =========================================================================
-   FRITUUR MADELYN — interactie
-   ========================================================================= */
-(function(){
-  "use strict";
-  const $ = (s,r=document)=>r.querySelector(s);
-  const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
-  const eur = c => "€ " + (c/100).toFixed(2).replace(".",",");
-
-  /* ---------- opening hours (per weekday: [ [openMin,closeMin], ... ]) ---------- */
-  // 0 = zondag ... 6 = zaterdag
-  const HRS = {
-    0:[[11*60,14*60],[16*60+30,22*60]],
-    1:null,                                   // maandag gesloten
-    2:[[11*60,14*60],[16*60+30,22*60]],
-    3:[[11*60,14*60],[16*60+30,22*60]],
-    4:[[11*60,14*60],[16*60+30,22*60]],
-    5:[[11*60,14*60],[16*60+30,23*60]],
-    6:[[11*60,14*60],[16*60+30,23*60]]
-  };
-  const DAYS = ["Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"];
-  const fmtT = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
-  const rangesStr = d => HRS[d]? HRS[d].map(r=>fmtT(r[0])+"–"+fmtT(r[1])).join("  &  ") : "Gesloten";
-
-  function statusNow(){
-    const now = new Date();
-    const d = now.getDay(), m = now.getHours()*60+now.getMinutes();
-    const today = HRS[d];
-    if(today){
-      for(const [o,c] of today){
-        if(m>=o && m<c) return {open:true, closeMin:c, txt:"Nu open · sluit om "+fmtT(c)};
-        if(m<o) return {open:false, txt:"Open vanaf "+fmtT(o)+" vandaag"};
-      }
-    }
-    // find next opening
-    for(let i=1;i<=7;i++){
-      const nd=(d+i)%7; if(HRS[nd]) return {open:false, txt:"Gesloten · open "+DAYS[nd].toLowerCase()+" vanaf "+fmtT(HRS[nd][0][0])};
-    }
-    return {open:false, txt:"Tijdelijk gesloten"};
-  }
-  function renderStatus(){
-    const s = statusNow();
-    const pill = $("#hero-status");
-    pill.classList.toggle("open",s.open); pill.classList.toggle("closed",!s.open);
-    $(".txt",pill).textContent = s.txt;
-    $("#ribbon-status").textContent = s.open ? "open tot "+fmtT(s.closeMin) : "vandaag "+ (HRS[new Date().getDay()]? "vanaf "+fmtT(HRS[new Date().getDay()][0][0]) : "gesloten");
-  }
-  function renderHoursTable(){
-    const t=$("#hours-table"); const today=new Date().getDay();
-    const order=[1,2,3,4,5,6,0];
-    t.innerHTML = order.map(d=>`<tr class="${d===today?'today':''}"><td class="day">${DAYS[d]}</td><td class="hrs">${rangesStr(d)}</td></tr>`).join("");
-  }
-
-  /* ---------- MENU DATA ---------- */
-  const SAUCES = ["Mayonaise","Curry ketchup","Ketchup","Andalouse","Samurai","Joppiesaus","Tartaar","Looksaus","Bicky saus","Pickles","Mammoetsaus","Mosterd"];
-  const MENU = [
-    { id:"friet", icon:"🍟", name:"Frietjes", note:"vers geschild · dubbel gebakken", items:[
-      { id:"friet-portie", name:"Verse frietjes", desc:"Onze klassieker, dubbel gebakken in ossewit.", price:320, tag:"topper",
-        options:[
-          {name:"Portie", type:"radio", required:true, choices:[{label:"Klein",price:0},{label:"Medium",price:60},{label:"Groot",price:140},{label:"Familiezak",price:520}]},
-          {name:"Sausje erbij?", type:"radio", required:false, choices:[{label:"Zonder saus",price:0},{label:"Met saus (+€0,80)",price:80}]}
-        ]},
-      { id:"friet-stoof", name:"Frietjes met stoofvlees", desc:"Overgoten met huisgemaakte Vlaamse stoofvlees.", price:1250, tag:"topper" },
-      { id:"friet-curry", name:"Frietjes met currysaus & balletjes", desc:"Huisgemaakte currysaus met gehaktballetjes.", price:850 },
-      { id:"friet-vol", name:"Frietjes met vol-au-vent", desc:"Romige videe met kip en champignons.", price:1350 }
-    ]},
-    { id:"snacks", icon:"🌭", name:"Snacks", note:"alles vers uit 't vet", items:[
-      { id:"frik", name:"Frikandel", desc:"De onvervalste Belgische klassieker.", price:220 },
-      { id:"frik-spec", name:"Frikandel speciaal", desc:"Gehalveerd met mayonaise, curry & ui.", price:320, tag:"topper" },
-      { id:"bicky", name:"Bicky Burger", desc:"Met bicky dressing, ui & augurk.", price:380, tag:"topper" },
-      { id:"boulet", name:"Boulet (gehaktbal)", desc:"Stevige gehaktbal, ook lekker met stoofsaus.", price:250 },
-      { id:"cervela", name:"Cervela", desc:"Gepekelde worst, gefrituurd — krokant velletje.", price:250 },
-      { id:"curryworst", name:"Curryworst", desc:"Met huisgemaakte currysaus.", price:320 },
-      { id:"viandel", name:"Viandel", desc:"Pikante klassieker.", price:240 },
-      { id:"loempia", name:"Grote loempia", desc:"Krokant, met zoetzure saus.", price:320, tag:"topper" },
-      { id:"kaaskroket", name:"Kaaskroket", desc:"Smeuïg van binnen, krokant van buiten.", price:240 },
-      { id:"garnaalkroket", name:"Garnaalkroket", desc:"Met Noordzeegarnalen.", price:340 },
-      { id:"bamischijf", name:"Bamischijf", desc:"Krokante schijf met bami.", price:240 },
-      { id:"mexicano", name:"Mexicano", desc:"Pikant gekruide burger op een stokje.", price:280 },
-      { id:"berenklauw", name:"Berenpoot / berenklauw", desc:"Gehakt met ui op een stokje.", price:280 },
-      { id:"kipnuggets", name:"Kipnuggets (6 st.)", desc:"Met saus naar keuze.", price:450 },
-      { id:"kipfingers", name:"Kipfingers (5 st.)", desc:"Krokante kipreepjes.", price:450 },
-      { id:"bitterballen", name:"Bitterballen (8 st.)", desc:"Met mosterd.", price:480 }
-    ]},
-    { id:"burgers", icon:"🍔", name:"Burgers", note:"", items:[
-      { id:"hamburger", name:"Hamburger", desc:"Rundsburger met sla, tomaat & saus.", price:320 },
-      { id:"cheeseburger", name:"Cheeseburger", desc:"Met gesmolten cheddar.", price:360 },
-      { id:"kipburger", name:"Kipburger", desc:"Krokante kipfilet.", price:380 },
-      { id:"fishburger", name:"Fishburger", desc:"Met witvis & tartaar.", price:380 },
-      { id:"bicky-cheese", name:"Bicky Cheese", desc:"Bicky met extra kaas.", price:420 },
-      { id:"megaburger", name:"Megaburger", desc:"Dubbel vlees, voor de grote honger.", price:520 }
-    ]},
-    { id:"broodjes", icon:"🥖", name:"Mitraillette & broodjes", note:"stokbrood + snack + friet", items:[
-      { id:"mitr", name:"Mitraillette", desc:"Stokbrood met snack naar keuze, frietjes & saus.", price:650, tag:"topper",
-        options:[
-          {name:"Kies je snack", type:"radio", required:true, choices:[{label:"Frikandel",price:0},{label:"Hamburger",price:0},{label:"Cervela",price:0},{label:"Kipfingers",price:60},{label:"Bicky burger",price:60}]},
-          {name:"Saus", type:"radio", required:true, choices:SAUCES.slice(0,8).map(s=>({label:s,price:0}))}
-        ]},
-      { id:"br-frik", name:"Broodje frikandel", desc:"Vers stokbrood met frikandel & saus.", price:400 },
-      { id:"br-martino", name:"Broodje martino", desc:"Rauw gehakt, pikant aangemaakt — een streekklassieker.", price:480 },
-      { id:"br-kip", name:"Broodje kipfingers", desc:"Met sla, tomaat & saus.", price:480 }
-    ]},
-    { id:"specialiteiten", icon:"🍲", name:"Stoofpotjes & specialiteiten", note:"huisgemaakt", items:[
-      { id:"stoof-friet", name:"Vlaamse stoofvlees met friet", desc:"Uren geprutteld op bruin bier. De topper van 't huis.", price:1250, tag:"topper" },
-      { id:"volauvent", name:"Vol-au-vent met friet", desc:"Romige videe met kip & champignons.", price:1350 },
-      { id:"goulash", name:"Goulash met friet", desc:"Pikant stoofpotje.", price:1300 },
-      { id:"balletjes", name:"Balletjes in tomatensaus met friet", desc:"Gehaktballetjes in huisgemaakte tomatensaus.", price:1200 }
-    ]},
-    { id:"kids", icon:"🧒", name:"Kindermenu", note:"", items:[
-      { id:"kids-menu", name:"Kindermenu", desc:"Snack + kleine friet + drankje + verrassing.", price:650,
-        options:[
-          {name:"Snack", type:"radio", required:true, choices:[{label:"Frikandel",price:0},{label:"Kipnuggets",price:0},{label:"Bitterballen",price:0}]},
-          {name:"Drankje", type:"radio", required:true, choices:[{label:"Fristi",price:0},{label:"Cécémel",price:0},{label:"Water",price:0},{label:"Fanta",price:0}]}
-        ]}
-    ]},
-    { id:"sauzen", icon:"🥫", name:"Sauzen", note:"huisgemaakt waar 't kan", items:
-      SAUCES.map((s,i)=>({ id:"saus-"+i, name:s, desc:"", price:80 }))
-      .concat([{ id:"saus-stoof", name:"Stoofvleessaus (apart)", desc:"Extra portie huisgemaakte stoofsaus.", price:250 }])
-    },
-    { id:"zoet", icon:"🍨", name:"Zoet & ijs", note:"huisgemaakt ijs", items:[
-      { id:"ijs-bol", name:"Huisgemaakt ijs (bol)", desc:"Vanille, chocolade of mokka.", price:180 },
-      { id:"dame", name:"Dame Blanche", desc:"Vanille-ijs met warme chocoladesaus & slagroom.", price:550 },
-      { id:"smout", name:"Smoutebollen (6 st.)", desc:"Warm, met bloemsuiker — Haspengouwse kermisklassieker.", price:450 },
-      { id:"oliebol", name:"Oliebollen (5 st.)", desc:"Met bloemsuiker.", price:400 }
-    ]},
-    { id:"drank", icon:"🥤", name:"Frisdrank", note:"", items:[
-      { id:"cola", name:"Coca-Cola / Zero (33 cl)", desc:"", price:250 },
-      { id:"fanta", name:"Fanta / Sprite (33 cl)", desc:"", price:250 },
-      { id:"cecemel", name:"Cécémel", desc:"De echte Belgische chocomelk.", price:250 },
-      { id:"fristi", name:"Fristi", desc:"", price:250 },
-      { id:"water", name:"Water plat / bruis (50 cl)", desc:"", price:200 },
-      { id:"jupiler", name:"Jupiler (33 cl blik)", desc:"", price:300 }
-    ]}
-  ];
-  const ITEM_INDEX = {};
-  MENU.forEach(cat=>cat.items.forEach(it=>ITEM_INDEX[it.id]={...it,catIcon:cat.icon}));
-
-  /* ---------- CART STATE ---------- */
-  let cart = [];
-  try{ cart = JSON.parse(localStorage.getItem("fm-cart")||"[]"); }catch(e){ cart=[]; }
-  const saveCart = ()=>{ try{ localStorage.setItem("fm-cart",JSON.stringify(cart)); }catch(e){} };
-  const cartCount = ()=> cart.reduce((n,l)=>n+l.qty,0);
-  const cartTotal = ()=> cart.reduce((n,l)=>n+l.unit*l.qty,0);
-  const lineKey = (id,opts)=> id + "|" + (opts||[]).map(o=>o.value).join(",");
-
-  function addToCart(id, chosen, qty){
-    qty = qty||1;
-    const base = ITEM_INDEX[id]; if(!base) return;
-    let unit = base.price, optLabels=[];
-    (chosen||[]).forEach(g=>{ unit += g.priceDelta||0; if(g.value) optLabels.push({group:g.group, value:g.value}); });
-    const key = lineKey(id, optLabels.map(o=>({value:o.value})));
-    const existing = cart.find(l=>l.key===key);
-    if(existing){ existing.qty += qty; }
-    else{ cart.push({ key, id, name:base.name, icon:base.catIcon, unit, opts:optLabels, qty }); }
-    saveCart(); updateCartUI(); pulseCart();
-    toast(base.name+" toegevoegd");
-  }
-  function setQty(key, delta){
-    const l = cart.find(x=>x.key===key); if(!l) return;
-    l.qty += delta; if(l.qty<=0) cart = cart.filter(x=>x.key!==key);
-    saveCart(); updateCartUI();
-  }
-  function removeLine(key){ cart = cart.filter(x=>x.key!==key); saveCart(); updateCartUI(); }
-
-  /* ---------- RENDER MENU ---------- */
-  function renderMenu(){
-    const root = $("#menu-root"); const nav = $("#cat-nav");
-    nav.innerHTML = MENU.map((c,i)=>`<button role="tab" data-cat="${c.id}" class="${i===0?'active':''}">${c.icon} ${c.name}</button>`).join("");
-    root.innerHTML = MENU.map((c,i)=>`
-      <div class="menu-cat" id="cat-${c.id}">
-        <div class="menu-cat-head">
-          <span class="n">${String(i+1).padStart(2,'0')}</span>
-          <h3>${c.icon} ${c.name}</h3>
-          ${c.note?`<span class="note">${c.note}</span>`:''}
-        </div>
-        <div class="items">
-          ${c.items.map(it=>itemCard(it)).join("")}
-        </div>
-      </div>`).join("");
-  }
-  function itemCard(it){
-    const hasOpt = !!it.options;
-    const tag = it.tag==="topper" ? `<span class="pop">Topper</span>` : (it.tag==="veggie"?`<span class="veg">Veggie</span>`:"");
-    return `<div class="item">
-      <div class="info">
-        <div class="nm">${it.name} ${tag}</div>
-        ${it.desc?`<div class="ds">${it.desc}</div>`:''}
-        <div class="foot">
-          <span class="pr">${eur(it.price)}${hasOpt?' <small>vanaf</small>':''}</span>
-          <button class="add ${hasOpt?'opt':''}" data-item="${it.id}">
-            ${hasOpt?'Kies opties':`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg> Toevoegen`}
-          </button>
-        </div>
-      </div>
-    </div>`;
-  }
-
-  /* ---------- CART UI ---------- */
-  function updateCartUI(){
-    const n = cartCount();
-    const cc = $("#cart-count"); cc.textContent = n; cc.classList.toggle("show",n>0);
-    const body=$("#d-body"), foot=$("#d-foot");
-    if(cart.length===0){
-      body.innerHTML = `<div class="empty">
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h40l-4 30a4 4 0 0 1-4 3.5H20A4 4 0 0 1 16 50L12 20Z"/><path d="M22 20a10 10 0 0 1 20 0"/></svg>
-        <b>Je mandje is nog leeg</b>
-        <span>Voeg iets lekkers toe uit de kaart en het verschijnt hier als bestelbon.</span>
-      </div>`;
-      foot.hidden = true;
-      $("#bonnr").textContent="—";
-      return;
-    }
-    foot.hidden = false;
-    $("#bonnr").textContent = bonNr();
-    body.innerHTML = cart.map(l=>`
-      <div class="line">
-        <div class="qbox">
-          <button class="qbtn" data-q="+" data-key="${l.key}" aria-label="Meer">+</button>
-          <span class="q">${l.qty}</span>
-          <button class="qbtn" data-q="-" data-key="${l.key}" aria-label="Minder">−</button>
-        </div>
-        <div class="l-info">
-          <div class="l-nm"><span>${l.icon} ${l.name}</span><span>${eur(l.unit*l.qty)}</span></div>
-          ${l.opts&&l.opts.length?`<div class="l-opts">${l.opts.map(o=>o.value).join(" · ")}</div>`:''}
-          <div class="l-rm" data-rm="${l.key}" role="button" tabindex="0">verwijderen</div>
-        </div>
-      </div>`).join("");
-    renderTotals();
-  }
-  const MIN_ORDER = 500;
-  function renderTotals(){
-    const sub = cartTotal();
-    $("#totals").innerHTML = `
-      <div class="r"><span>Subtotaal (${cartCount()} stuks)</span><span class="tnum">${eur(sub)}</span></div>
-      <div class="r"><span>Afhalen</span><span>gratis</span></div>
-      <div class="r grand"><span>Totaal</span><span class="tnum">${eur(sub)}</span></div>`;
-    const btn=$("#place-order"), note=$("#min-note");
-    if(sub<MIN_ORDER){ btn.disabled=true; note.textContent=`Minimum €${(MIN_ORDER/100).toFixed(2).replace('.',',')} voor een afhaalbestelling.`; }
-    else{ btn.disabled=false; note.textContent=""; }
-  }
-  let _bon=null;
-  function bonNr(){ if(!_bon) _bon = "MD"+String(Math.floor(100+Math.random()*900)); return _bon; }
-
-  function pulseCart(){
-    const b=$("#cart-open"); b.animate([{transform:"scale(1)"},{transform:"scale(1.18)"},{transform:"scale(1)"}],{duration:340,easing:"ease-out"});
-  }
-
-  /* ---------- pickup time slots ---------- */
-  function fillPickup(){
-    const sel=$("#pickup-time"); const now=new Date();
-    let slots=[]; const d=now.getDay(); const today=HRS[d];
-    const nowMin=now.getHours()*60+now.getMinutes();
-    if(today){
-      today.forEach(([o,c])=>{
-        let start=Math.max(o, Math.ceil((nowMin+15)/15)*15);
-        for(let m=start;m<=c-5;m+=15) slots.push(m);
-      });
-    }
-    if(slots.length===0){
-      // next open day
-      for(let i=1;i<=7;i++){ const nd=(d+i)%7; if(HRS[nd]){ const o=HRS[nd][0][0]; sel.innerHTML=`<option>${DAYS[nd]} vanaf ${fmtT(o)}</option>`; return; } }
-    }
-    sel.innerHTML = `<option value="asap">Zo snel mogelijk (~15 min)</option>` + slots.map(m=>`<option value="${m}">Vandaag om ${fmtT(m)}</option>`).join("");
-  }
-
-  /* ---------- OPTIONS MODAL ---------- */
-  let optState=null;
-  function openOptions(id){
-    const it=ITEM_INDEX[id]; if(!it) return;
-    optState={ id, qty:1, groups: it.options.map(g=>({def:g, value:g.choices[0].label, price:g.choices[0].price})) };
-    $("#opt-title").textContent=it.name;
-    $("#opt-desc").textContent=it.desc||"";
-    $("#opt-qty").textContent="1";
-    $("#opt-groups").innerHTML = it.options.map((g,gi)=>`
-      <div class="opt-group">
-        <h4>${g.name}${g.required?'':' <span style="text-transform:none;letter-spacing:0;color:var(--ink-faint)">(optioneel)</span>'}</h4>
-        ${g.choices.map((ch,ci)=>`
-          <label class="opt-row ${ci===0?'sel':''}" data-g="${gi}" data-c="${ci}">
-            <input type="radio" name="g${gi}" ${ci===0?'checked':''}>
-            <span class="l">${ch.label}</span>
-            ${ch.price?`<span class="p">+ ${eur(ch.price)}</span>`:'<span class="p"></span>'}
-          </label>`).join("")}
-      </div>`).join("");
-    recalcOpt();
-    showModal("#opt-modal");
-  }
-  function recalcOpt(){
-    const it=ITEM_INDEX[optState.id];
-    let unit=it.price; optState.groups.forEach(g=>unit+=g.price);
-    $("#opt-price").textContent=eur(unit*optState.qty);
-  }
-  $("#opt-groups").addEventListener("click",e=>{
-    const row=e.target.closest(".opt-row"); if(!row) return;
-    const gi=+row.dataset.g, ci=+row.dataset.c;
-    $$(`.opt-row[data-g="${gi}"]`).forEach(r=>r.classList.remove("sel"));
-    row.classList.add("sel"); $("input",row).checked=true;
-    const ch=ITEM_INDEX[optState.id].options[gi].choices[ci];
-    optState.groups[gi]={def:ITEM_INDEX[optState.id].options[gi],value:ch.label,price:ch.price};
-    recalcOpt();
-  });
-  $("#opt-plus").onclick=()=>{ optState.qty++; $("#opt-qty").textContent=optState.qty; recalcOpt(); };
-  $("#opt-minus").onclick=()=>{ if(optState.qty>1){optState.qty--; $("#opt-qty").textContent=optState.qty; recalcOpt();} };
-  $("#opt-add").onclick=()=>{
-    const chosen=optState.groups.map((g,i)=>({group:ITEM_INDEX[optState.id].options[i].name, value:g.value, priceDelta:g.price}));
-    addToCart(optState.id, chosen, optState.qty);
-    hideModal("#opt-modal");
-  };
-
-  /* ---------- modal helpers ---------- */
-  function showModal(sel){ $(sel).classList.add("show"); document.body.style.overflow="hidden"; }
-  function hideModal(sel){ $(sel).classList.remove("show"); if(!$(".modal-back.show")&&!$("#drawer").classList.contains("show")) document.body.style.overflow=""; }
-  $$(".modal-back").forEach(m=>m.addEventListener("click",e=>{ if(e.target===m) hideModal("#"+m.id); }));
-
-  /* ---------- drawer ---------- */
-  function openDrawer(){ $("#drawer").classList.add("show"); $("#scrim").classList.add("show"); $("#drawer").setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; fillPickup(); }
-  function closeDrawer(){ $("#drawer").classList.remove("show"); $("#scrim").classList.remove("show"); $("#drawer").setAttribute("aria-hidden","true"); if(!$(".modal-back.show")) document.body.style.overflow=""; }
-  $("#cart-open").onclick=openDrawer; $("#d-close").onclick=closeDrawer; $("#scrim").onclick=closeDrawer;
-
-  /* ---------- place order ---------- */
-  $("#place-order").onclick=()=>{
-    const name=$("#cust-name").value.trim(), tel=$("#cust-tel").value.trim();
-    if(!name||!tel){ $("#min-note").textContent="Vul je naam en telefoonnummer in."; (!name?$("#cust-name"):$("#cust-tel")).focus(); return; }
-    const timeSel=$("#pickup-time"); const tv=timeSel.value;
-    const timeTxt = tv==="asap" ? "±15 min (zo snel mogelijk)" : (isNaN(+tv)? timeSel.options[timeSel.selectedIndex].text : fmtT(+tv));
-    $("#conf-name").textContent=name;
-    $("#conf-nr").textContent=bonNr();
-    $("#conf-time").textContent = tv==="asap" ? "~15 min" : (isNaN(+tv)?timeTxt:fmtT(+tv));
-    $("#conf-list").innerHTML = cart.map(l=>`<div class="r"><b>${l.qty}× ${l.name}</b><span class="tnum">${eur(l.unit*l.qty)}</span></div>${l.opts&&l.opts.length?`<div class="r" style="font-size:.78rem"><span>${l.opts.map(o=>o.value).join(" · ")}</span><span></span></div>`:''}`).join("");
-    $("#conf-total").textContent=eur(cartTotal());
-    closeDrawer(); showModal("#confirm-modal");
-    // clear
-    cart=[]; _bon=null; saveCart(); updateCartUI();
-    $("#cust-name").value=""; $("#cust-tel").value=""; $("#cust-note").value="";
-  };
-  $("#conf-close").onclick=()=>hideModal("#confirm-modal");
-  $("#conf-again").onclick=()=>{ hideModal("#confirm-modal"); document.querySelector("#bestellen").scrollIntoView({behavior:"smooth"}); };
-
-  /* ---------- global click delegation ---------- */
-  document.addEventListener("click",e=>{
-    const add=e.target.closest("[data-item]");
-    if(add){ const id=add.dataset.item; const it=ITEM_INDEX[id]; if(it&&it.options) openOptions(id); else addToCart(id); return; }
-    const mini=e.target.closest("[data-add]");
-    if(mini){ const id=mini.dataset.add; const it=ITEM_INDEX[id]; if(it&&it.options) openOptions(id); else addToCart(id); return; }
-    const q=e.target.closest("[data-q]");
-    if(q){ setQty(q.dataset.key, q.dataset.q==="+"?1:-1); return; }
-    const rm=e.target.closest("[data-rm]");
-    if(rm){ removeLine(rm.dataset.rm); return; }
-  });
-  document.addEventListener("keydown",e=>{
-    if(e.key==="Escape"){ closeDrawer(); $$(".modal-back.show").forEach(m=>hideModal("#"+m.id)); $("#mobile-menu").classList.remove("show"); }
-    const rm=e.target.closest && e.target.closest("[data-rm]");
-    if(rm && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); removeLine(rm.dataset.rm); }
-  });
-
-  /* ---------- toast ---------- */
-  let toastT;
-  function toast(msg){
-    const w=$("#toast-wrap");
-    const t=document.createElement("div"); t.className="toast";
-    t.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>${msg}`;
-    w.appendChild(t); requestAnimationFrame(()=>t.classList.add("show"));
-    setTimeout(()=>{ t.classList.remove("show"); setTimeout(()=>t.remove(),400); },1900);
-  }
-
-  /* ---------- category scrollspy ---------- */
-  function initCatNav(){
-    $("#cat-nav").addEventListener("click",e=>{
-      const b=e.target.closest("[data-cat]"); if(!b) return;
-      const el=$("#cat-"+b.dataset.cat);
-      const y=el.getBoundingClientRect().top+window.scrollY-130;
-      window.scrollTo({top:y,behavior:"smooth"});
-    });
-    const cats=MENU.map(c=>$("#cat-"+c.id));
-    const spy=new IntersectionObserver(entries=>{
-      entries.forEach(en=>{
-        if(en.isIntersecting){
-          const id=en.target.id.replace("cat-","");
-          $$("#cat-nav button").forEach(b=>b.classList.toggle("active",b.dataset.cat===id));
-          const activeBtn=$(`#cat-nav button[data-cat="${id}"]`);
-          if(activeBtn) activeBtn.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});
-        }
-      });
-    },{rootMargin:"-140px 0px -70% 0px"});
-    cats.forEach(c=>c&&spy.observe(c));
-  }
-
-  /* ---------- reveal on scroll ---------- */
-  function initReveal(){
-    const io=new IntersectionObserver((ents)=>{
-      ents.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
-    },{rootMargin:"0px 0px -8% 0px",threshold:.08});
-    $$(".reveal").forEach(el=>io.observe(el));
-  }
-
-  /* ---------- photo fallback (real images degrade to SVG art) ---------- */
-  function initPhotos(){
-    $$(".photo img").forEach(img=>{
-      img.addEventListener("error",()=>img.classList.add("failed"),{once:true});
-      if(img.complete && img.naturalWidth===0) img.classList.add("failed");
-    });
-    // paint SVG art layers for known slots
-    const arts={
-      stoofvlees:g("#8a4b1a","#c97b28","🍟"),
-      burger:g("#7a3d12","#b8641c","🍔"),
-      snack:g("#824312","#c07a24","🌭"),
-      mitraillette:g("#6d3a14","#a86a24","🥖"),
-      loempia:g("#7c4a16","#b87e2c","🥟"),
-      shop:g("#123f3a","#0e6d63","🏪")
-    };
-    $$(".photo .art").forEach(a=>{ const k=a.dataset.art; if(arts[k]) a.style.cssText+=arts[k]; });
-    function g(a,b,emoji){ return `background:radial-gradient(140% 120% at 25% 15%, ${b}, ${a} 78%);`; }
-    // add a big emoji glyph centered as tasteful fallback content
-    $$(".photo .art").forEach(a=>{
-      const k=a.dataset.art; const em={stoofvlees:"🍟",burger:"🍔",snack:"🌭",mitraillette:"🥖",loempia:"🥟",shop:"🏪"}[k]||"🍟";
-      a.innerHTML=`<div style="position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(48px,9vw,96px);opacity:.9;filter:drop-shadow(0 8px 20px rgba(0,0,0,.4))">${em}</div>
-        <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1.6px);background-size:14px 14px"></div>`;
-    });
-  }
-
-  /* ---------- theme ---------- */
-  function initTheme(){
-    const saved=(()=>{try{return localStorage.getItem("fm-theme")}catch(e){return null}})();
-    if(saved) document.documentElement.setAttribute("data-theme",saved);
-    updateThemeIcon();
-    $("#theme-toggle").onclick=()=>{
-      const cur=document.documentElement.getAttribute("data-theme");
-      const sysDark=window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = cur? cur==="dark" : sysDark;
-      const next= isDark? "light":"dark";
-      document.documentElement.setAttribute("data-theme",next);
-      try{localStorage.setItem("fm-theme",next)}catch(e){}
-      updateThemeIcon();
-    };
-  }
-  function updateThemeIcon(){
-    const cur=document.documentElement.getAttribute("data-theme");
-    const sysDark=window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = cur? cur==="dark" : sysDark;
-    $("#theme-icon").innerHTML = isDark
-      ? '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>'
-      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
-  }
-
-  /* ---------- nav scroll + mobile ---------- */
-  function initNav(){
-    const nav=$("#nav");
-    const onScroll=()=>nav.classList.toggle("solid",window.scrollY>20);
-    onScroll(); window.addEventListener("scroll",onScroll,{passive:true});
-    $("#ham").onclick=()=>$("#mobile-menu").classList.add("show");
-    $("#m-close").onclick=()=>$("#mobile-menu").classList.remove("show");
-    $$("#mobile-menu a").forEach(a=>a.onclick=()=>$("#mobile-menu").classList.remove("show"));
-  }
-
-  /* ---------- init ---------- */
-  document.addEventListener("DOMContentLoaded",()=>{
-    $("#year").textContent=new Date().getFullYear();
-    renderStatus(); renderHoursTable();
-    renderMenu(); initCatNav();
-    updateCartUI();
-    initReveal(); initPhotos(); initTheme(); initNav();
-    setInterval(renderStatus,60000);
-  });
-})();
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

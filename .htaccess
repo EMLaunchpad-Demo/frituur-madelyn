@@ -1,0 +1,46 @@
+# Frituur Madelyn — Apache config (Hostinger)
+# Zet dit bestand in de hoofdmap (public_html) samen met de HTML-bestanden.
+
+# ---------- Nette URL's: .html mag weggelaten worden ----------
+RewriteEngine On
+
+# Forceer HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Forceer www (verwijder dit blok als je liever zonder www werkt)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# /menu toont menu.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# ---------- Foutpagina ----------
+ErrorDocument 404 /404.html
+
+# ---------- Compressie ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# ---------- Browser-caching ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType text/html               "access plus 1 hour"
+</IfModule>
+
+# ---------- Beveiligingsheaders ----------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
