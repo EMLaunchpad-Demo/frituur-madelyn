@@ -8,6 +8,9 @@
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduced = function () {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  };
 
   /* ------------------------------------------------- OPENINGSUREN (bron) */
   /* 0 = zondag … 6 = zaterdag. null = gesloten.
@@ -105,9 +108,7 @@
   }
   function paintThemeIcon() {
     $$("[data-theme-icon]").forEach(function (el) {
-      el.innerHTML = isDark()
-        ? '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>'
-        : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+      el.textContent = isDark() ? "dark_mode" : "light_mode";
     });
   }
   function initTheme() {
@@ -126,9 +127,10 @@
   }
 
   /* ------------------------------------------------------- SCROLL-REVEAL */
-  function initReveal() {
-    var els = $$(".reveal");
-    if (!els.length || !("IntersectionObserver" in window)) {
+  function observeIn(selector, opts) {
+    var els = $$(selector);
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) {
       els.forEach(function (el) { el.classList.add("in"); });
       return;
     }
@@ -136,13 +138,44 @@
       ents.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    }, opts || { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ------------------------------------------------- HERO: intro-sequentie */
+  function initHero() {
+    var hero = $(".hero");
+    if (!hero) return;
+    requestAnimationFrame(function () { hero.classList.add("hero-in"); });
+    var cone = $(".cone-wrap", hero);
+    if (cone && !reduced()) {
+      cone.addEventListener("animationend", function (e) {
+        if (e.animationName === "coneIn") cone.classList.add("settled");
+      });
+    }
+  }
+
+  /* -------------------------------------------------------- HERO: parallax */
+  function initParallax() {
+    var hero = $(".hero");
+    if (!hero || reduced()) return;
+    var ticking = false;
+    function update() {
+      var r = hero.getBoundingClientRect();
+      // 0 wanneer de hero bovenaan staat, 1 wanneer hij net uit beeld is
+      var p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height)));
+      hero.style.setProperty("--sy", p.toFixed(3));
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
   }
 
   /* --------------------------------------------------------- FOTOVLAKKEN */
   /* Ontbreekt een foto (nog niet aangeleverd), dan blijft de getekende
-     illustratie staan in plaats van een gebroken-afbeelding-icoon. */
+     achtergrond staan in plaats van een gebroken-afbeelding-icoon. */
   function initShots() {
     $$(".shot").forEach(function (shot) {
       var img = shot.querySelector("img");
@@ -154,28 +187,90 @@
         img.addEventListener("error", fail, { once: true });
       }
     });
+    observeIn(".shot", { rootMargin: "0px 0px -5% 0px", threshold: 0.1 });
   }
 
-  /* ------------------------------------------- MENUKAART: actieve categorie */
-  function initMenuSpy() {
+  /* ------------------------------- MENUKAART: spy + schuivende indicator */
+  function initMenuNav() {
     var nav = $(".menu-nav");
     if (!nav) return;
+
+    var indicator = document.createElement("span");
+    indicator.className = "indicator";
+    nav.insertBefore(indicator, nav.firstChild);
+
     var links = $$("a", nav);
-    var secs = links.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); })
-                    .filter(Boolean);
-    if (!secs.length || !("IntersectionObserver" in window)) return;
-    var spy = new IntersectionObserver(function (ents) {
+    function moveTo(link) {
+      if (!link) return;
+      nav.style.setProperty("--ix", (link.offsetLeft - nav.scrollLeft) + "px");
+      nav.style.setProperty("--iw", link.offsetWidth + "px");
+    }
+    function setActive(link) {
+      links.forEach(function (a) { a.classList.toggle("active", a === link); });
+      moveTo(link);
+    }
+    nav.addEventListener("scroll", function () {
+      var a = nav.querySelector("a.active"); if (a) moveTo(a);
+    }, { passive: true });
+    window.addEventListener("resize", function () {
+      var a = nav.querySelector("a.active"); if (a) moveTo(a);
+    });
+
+    var secs = links.map(function (a) {
+      return document.getElementById(a.getAttribute("href").slice(1));
+    }).filter(Boolean);
+
+    setActive(links[0]);
+
+    if (secs.length && "IntersectionObserver" in window) {
+      var spy = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var link = nav.querySelector('a[href="#' + en.target.id + '"]');
+          if (link) {
+            setActive(link);
+            link.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+          }
+        });
+      }, { rootMargin: "-150px 0px -70% 0px" });
+      secs.forEach(function (s) { spy.observe(s); });
+    }
+  }
+
+  /* ------------------------- MENUKAART: regels komen één voor één binnen */
+  function initMenuLines() {
+    var rows = $$(".mi");
+    if (!rows.length) return;
+    if (!("IntersectionObserver" in window) || reduced()) {
+      rows.forEach(function (r) { r.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (ents) {
       ents.forEach(function (en) {
         if (!en.isIntersecting) return;
-        var id = en.target.id;
-        links.forEach(function (a) {
-          a.classList.toggle("active", a.getAttribute("href") === "#" + id);
-        });
-        var active = nav.querySelector("a.active");
-        if (active) active.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+        var el = en.target;
+        var sibs = Array.prototype.slice.call(el.parentNode.children);
+        el.style.transitionDelay = Math.min(sibs.indexOf(el), 8) * 45 + "ms";
+        el.classList.add("in");
+        io.unobserve(el);
       });
-    }, { rootMargin: "-150px 0px -70% 0px" });
-    secs.forEach(function (s) { spy.observe(s); });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.1 });
+    rows.forEach(function (r) { io.observe(r); });
+  }
+
+  /* --------------------------------- MARQUEE buigt mee met de scrollsnelheid */
+  function initMarquee() {
+    var m = $(".marquee");
+    if (!m || reduced()) return;
+    var last = window.scrollY, idle = null;
+    window.addEventListener("scroll", function () {
+      var y = window.scrollY;
+      var v = Math.max(-9, Math.min(9, (y - last) * 0.35));
+      last = y;
+      m.style.setProperty("--skew", v.toFixed(2) + "deg");
+      clearTimeout(idle);
+      idle = setTimeout(function () { m.style.setProperty("--skew", "0deg"); }, 140);
+    }, { passive: true });
   }
 
   /* ------------------------------------------------------------------ INIT */
@@ -185,9 +280,13 @@
     renderHoursTable();
     initNav();
     initTheme();
-    initReveal();
+    initHero();
+    initParallax();
+    observeIn(".reveal");
     initShots();
-    initMenuSpy();
+    initMenuNav();
+    initMenuLines();
+    initMarquee();
     setInterval(renderStatus, 60000);
   }
 
