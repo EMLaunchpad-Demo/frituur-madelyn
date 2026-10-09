@@ -1,132 +1,71 @@
 # Frituur Madelyn — website
 
-Statische website voor **Frituur Madelyn**, Graethempoort 6, 3840 Borgloon.
-Gebouwd door **EM Launchpad**. Geen frameworks, geen build-stap: de bestanden
-kunnen rechtstreeks naar Hostinger geüpload worden.
+Website voor Frituur Madelyn, Graethempoort 6, 3840 Borgloon.
+Gebouwd door EM Launchpad. Gewone HTML en CSS, geen build-stap: de bestanden
+kunnen zo naar Hostinger.
 
----
+## Pagina's
 
-## 1. Wat er in zit
+| Bestand | Inhoud |
+|---|---|
+| `index.html` | Foto, korte welkomsttekst, klassiekers, feestzaal, openingsuren, adres en kaart |
+| `menu.html` | Menukaart met prijzen |
+| `feestzaal.html` | Feestzaal Graethempoort, met veelgestelde vragen |
+| `404.html` | Foutpagina |
 
-**5 pagina's**
+Verder: `assets/css/styles.css`, `assets/js/main.js`, `assets/img/favicon.svg`,
+`sitemap.xml`, `robots.txt`, `.htaccess`.
 
-| Bestand | Pagina | Doel |
+## Foto's
+
+De foto's komen van [Pexels](https://www.pexels.com/license/): gratis te gebruiken,
+ook commercieel, naamsvermelding niet verplicht. Ze worden nu rechtstreeks van
+Pexels geladen.
+
+| Waar | Foto | Fotograaf |
 |---|---|---|
-| `index.html` | Home | Merkverhaal, toppers, categorieën, uren |
-| `menu.html` | Menukaart | Volledige kaart met prijzen (hoofdpagina voor SEO) |
-| `over-ons.html` | Ons verhaal | Verhaal, werkwijze, Haspengouw |
-| `feestzaal.html` | Feestzaal Graethempoort | Feesten, FAQ, reserveren |
-| `contact.html` | Contact | Openingsuren, adres, kaart, route |
-| `404.html` | Foutpagina | Netjes terugleiden |
+| Home, bovenaan | [Freshly Fried French Fries](https://www.pexels.com/photo/15234683/) | Wijs |
+| Home, welkom | [French Fries Being Deep Fried](https://www.pexels.com/photo/8879636/) | Ron Lach |
+| Home, friet | [French Fries with Ketchup and Mayonnaise](https://www.pexels.com/photo/20205481/) | — |
+| Home, burgers | [Hamburger and Fries](https://www.pexels.com/photo/2983101/) | Jonathan Borba |
+| Home, stoofvlees | [A Stew Dish in Macro Shot](https://www.pexels.com/photo/8024112/) | Mateusz Feliksik |
+| Home + feestzaal | [People Giving a Toast](https://www.pexels.com/photo/8507671/) | Kampus Production |
+| Menukaart | [French Fries on White Paper](https://www.pexels.com/photo/12946719/) | — |
 
-**Functioneel**
-- Live **"nu open / gesloten"**-status, berekend uit één uren-tabel.
-- Openingsuren-tabel met **"vandaag"** gemarkeerd.
-- Donker én licht thema (volgt het systeem, met handmatige schakelaar).
-- Volledig responsief, toetsenbord-toegankelijk, respecteert `prefers-reduced-motion`.
-- Geen bestel- of afhaalsysteem — bestellen gebeurt aan de toonbank of telefonisch.
+**Voor livegang aanbevolen:** download ze (breedte ±1600 px), zet ze in
+`assets/img/` en vervang de `images.pexels.com`-links door het lokale pad.
+Dan laadt de site sneller en hangt ze niet af van Pexels.
 
-**Lokale SEO**
-- `Restaurant`-schema met adres, geo, openingsuren, telefoon en prijsklasse.
-- `Menu`-schema op de menukaart, `EventVenue` + `FAQPage` op de feestzaal.
-- Breadcrumb-schema, canonicals, Open Graph, `sitemap.xml`, `robots.txt`.
-- Eigen title + description per pagina, gericht op *frituur Borgloon / Haspengouw*.
+**Nog beter:** vervang ze door eigen foto's van de zaak. Een foto van de gevel
+en van de echte feestzaal ontbreekt bewust: een stockfoto zou die verkeerd
+voorstellen.
 
----
+## Nog te bevestigen door Madelyn
 
-## 2. Bestandsstructuur
+- [ ] **Openingsuren.** Nu: elke dag 11:00–14:00 en 16:30–22:00, vrijdag en
+      zaterdag tot 23:00. Bronnen spreken elkaar tegen. Aanpassen op drie
+      plekken: `HOURS` in `assets/js/main.js`, de tabel in `index.html` en de
+      `openingHoursSpecification` in `index.html`.
+- [ ] **Telefoon.** Nu `012 74 20 24`. Er circuleert ook `0465 64 62 25`.
+- [ ] **E-mail.** `info@frituurmadelyn.be` is aangenomen.
+- [ ] **Menukaart en prijzen** in `menu.html` — de gerechten komen uit
+      publieke bronnen, de prijzen zijn een inschatting.
+- [ ] **Coördinaten** in de structured data (nu bij benadering 50.8033, 5.3433).
 
-```
-index.html  menu.html  over-ons.html  feestzaal.html  contact.html  404.html
-robots.txt  sitemap.xml  .htaccess
-assets/
-  css/styles.css     ← alle styling (design tokens bovenaan)
-  js/main.js         ← alle interactie + de openingsuren
-  img/               ← HIER KOMEN DE FOTO'S
-```
+## Online zetten (Hostinger)
 
----
+1. hPanel → Bestandsbeheer → `public_html`.
+2. Upload alle bestanden en de map `assets/`. Zet "verborgen bestanden tonen"
+   aan zodat `.htaccess` mee gaat.
+3. Koppel `frituurmadelyn.be` en zet SSL aan.
+4. Meld de site aan bij Google Search Console en dien `sitemap.xml` in.
 
-## 3. Foto's aanleveren
+## Lokale SEO
 
-De site toont nu nette getekende illustraties als terugval. Zodra je een foto
-met de **juiste bestandsnaam** in `assets/img/` zet, verschijnt die automatisch —
-er hoeft niets in de code te veranderen. Ontbreekt een foto, dan blijft de
-illustratie staan (nooit een gebroken-afbeelding-icoon).
+Op de site: per pagina een eigen titel en beschrijving, één H1, alt-teksten,
+structured data (`Restaurant`, `Menu`, `EventVenue`, `FAQPage`, breadcrumbs),
+sitemap en canonicals.
 
-| Bestandsnaam | Waar | Formaat (ong.) |
-|---|---|---|
-| `stoofvlees-friet.jpg` | Home — grote topper | 900 × 900 |
-| `bicky-burger.jpg` | Home — topper | 700 × 500 |
-| `frikandel-speciaal.jpg` | Home — topper | 700 × 500 |
-| `mitraillette.jpg` | Home — topper | 700 × 500 |
-| `loempia.jpg` | Home — topper | 700 × 500 |
-| `frituur-madelyn-buitenkant.jpg` | Home + Ons verhaal | 800 × 1000 (staand) |
-| `haspengouw-bloesem.jpg` | Ons verhaal | 800 × 600 |
-| `feestzaal-graethempoort.jpg` | Feestzaal | 1200 × 675 |
-| `og-frituur-madelyn.jpg` | Deelafbeelding (WhatsApp/Facebook) | 1200 × 630 |
-| `og-feestzaal.jpg` | Deelafbeelding feestzaal | 1200 × 630 |
-
-> Tip: comprimeer de foto's (bv. via squoosh.app) tot onder ~300 kB per stuk.
-> Dat houdt de site snel, wat ook meetelt voor SEO.
-
----
-
-## 4. Vóór livegang controleren
-
-Deze gegevens zijn samengesteld uit publieke bronnen en moeten **door Madelyn
-bevestigd** worden:
-
-- [ ] **Telefoonnummer** — nu `012 74 20 24`. Er circuleert ook `0465 64 62 25`.
-- [ ] **E-mailadres** — nu `info@frituurmadelyn.be` (aangenomen).
-- [ ] **Openingsuren** — nu: ma gesloten, di–do 11–14 & 16.30–22, vr–za tot 23, zo tot 22.
-      Aanpassen op **één plek**: `HOURS` bovenaan `assets/js/main.js`, én de
-      `openingHoursSpecification` in `index.html` + de footer-lijstjes.
-- [ ] **Menukaart en prijzen** — volledige kaart nakijken in `menu.html`.
-- [ ] **Reviews** — op de home staan drie **voorbeeld**-kaarten, zichtbaar
-      gemarkeerd. Vervang ze door echte Google-reviews of verwijder de sectie.
-      *Zet hier geen verzonnen reviews in — dat is misleidend en in strijd met
-      de richtlijnen van Google.*
-- [ ] **Oprichtingsjaar** — bewust nergens hard genoemd. Voeg toe als het klopt.
-- [ ] **GPS-coördinaten** in de schema's (nu bij benadering: 50.8033, 5.3433).
-- [ ] **Facebook-link** nakijken (staat in de footer van elke pagina).
-
----
-
-## 5. Online zetten (Hostinger)
-
-1. Log in op hPanel → **Bestandsbeheer** → map `public_html`.
-2. Upload **alle** bestanden en de map `assets/` (behoud de mappenstructuur).
-3. Zorg dat `.htaccess` mee geüpload is (verborgen bestand — zet "verborgen
-   bestanden tonen" aan). Die regelt HTTPS, caching en de 404-pagina.
-4. Koppel het domein `frituurmadelyn.be` en activeer het gratis SSL-certificaat.
-5. Controleer: `https://www.frituurmadelyn.be/menu.html` moet werken.
-
-> Werkt de site liever zonder `www`? Verwijder dan het www-blok in `.htaccess`
-> en pas de canonicals/sitemap aan.
-
----
-
-## 6. Lokale SEO — volgende stappen
-
-De techniek op de site is klaar. Wat daarnaast het meeste oplevert:
-
-1. **Google Bedrijfsprofiel** claimen/bijwerken — veruit de grootste factor voor
-   "frituur Borgloon". Zorg dat naam, adres, telefoon en uren **exact** gelijk
-   zijn aan de website.
-2. Foto's op het bedrijfsprofiel zetten (gevel, friet, interieur, feestzaal).
-3. Klanten vragen om een review; reageren op elke review.
-4. Site aanmelden in **Google Search Console** en `sitemap.xml` indienen.
-5. Vermeldingen gelijktrekken op Facebook, Bottin, Goudengids, Restaurantguru
-   (zelfde NAW-gegevens = sterker lokaal signaal).
-
----
-
-## 7. Onderhoud
-
-- **Prijs of gerecht wijzigen** → `menu.html`.
-- **Openingsuren wijzigen** → `HOURS` in `assets/js/main.js` (+ schema & footer).
-- **Kleuren of lettertypes** → de tokens bovenaan `assets/css/styles.css`.
-
-De eerdere demo mét online bestelsysteem blijft bewaard in de git-geschiedenis
-(commit `3007113`), mocht Madelyn er later toch voor kiezen.
+Wat buiten de site het meeste oplevert: het **Google Bedrijfsprofiel**. Zorg dat
+naam, adres, telefoon en openingsuren daar exact gelijk zijn aan de website, zet
+er eigen foto's op en vraag klanten om een review.
