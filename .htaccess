@@ -1,5 +1,6 @@
-# Frituur Madelyn — Apache config (Hostinger)
-# Zet dit bestand in de hoofdmap (public_html) samen met de HTML-bestanden.
+# Frituur Madelyn: Apache-config, alleen nodig als de site ooit op Apache (bv. Hostinger) draait.
+# Op Cloudflare wordt dit bestand niet gebruikt en niet gepubliceerd (zie .assetsignore).
+# Op Cloudflare doen _redirects, _headers en wrangler.jsonc dit werk.
 
 # ---------- Nette URL's: .html mag weggelaten worden ----------
 RewriteEngine On
@@ -8,10 +9,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# Forceer www (verwijder dit blok als je liever zonder www werkt)
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTP_HOST} !^localhost [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+# Zonder www: www.frituurmadelyn.be stuurt door naar frituurmadelyn.be
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # /menu toont menu.html
 RewriteCond %{REQUEST_FILENAME} !-d

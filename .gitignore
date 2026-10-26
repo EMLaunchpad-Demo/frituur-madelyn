@@ -1,0 +1,5 @@
+# Alleen lokaal, niet in de repo
+.claude/
+.wrangler/
+node_modules/
+_oude-site/

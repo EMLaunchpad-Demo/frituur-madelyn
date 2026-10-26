@@ -1,0 +1,26 @@
+# Deze bestanden horen niet publiek op de site (gitignore-syntax)
+.git
+.gitattributes
+.assetsignore
+.claude
+_oude-site
+README.md
+*.md
+.htaccess
+# Door de Cloudflare-build gebruikt of aangemaakt
+wrangler.jsonc
+wrangler.json
+wrangler.toml
+.wrangler
+.gitignore
+node_modules
+package.json
+package-lock.json
+# Werkbestanden en systeembestanden
+*.py
+*.log
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+desktop.ini
