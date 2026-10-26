@@ -1,7 +1,8 @@
 # Permanente doorverwijzingen (301) voor de oude adressen van frituurmadelyn.be.
 # Cloudflare past deze regels toe voor het een bestand zoekt. Uitleg: README.md.
 # Let op: /feestzaal.html was op de oude site de pagina "Dagtoerist", dus die gaat
-# naar /groepen. De nieuwe feestzaalpagina staat op /feestzaal (bestand feestzaal.html).
+# naar /groepen. Madelyn doet niets meer met de feestzaal (Martijn, 26/10/2026):
+# de oude feestzaaladressen gaan naar de home.
 
 # Oude pagina's
 /index.html / 301
@@ -11,13 +12,14 @@
 /speciale-prijzen.html /groepen 301
 /contact.html /contact 301
 /foto.html / 301
-/feestzaal-greathempoort /feestzaal 301
-/feestzaal-greathempoort/ /feestzaal 301
-/feestzaal-greathempoort/index.html /feestzaal 301
+/feestzaal-greathempoort / 301
+/feestzaal-greathempoort/ / 301
+/feestzaal-greathempoort/index.html / 301
 
 # Nieuwe pagina's: zonder .html en zonder slash op het einde
 /groepen.html /groepen 301
 /menu/ /menu 301
-/feestzaal/ /feestzaal 301
+/feestzaal / 301
+/feestzaal/ / 301
 /groepen/ /groepen 301
 /contact/ /contact 301
