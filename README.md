@@ -34,7 +34,7 @@ Bron: de vorige website frituurmadelyn.be, gelezen op 26/10/2026. De HTML staat 
 
 - **Naam:** Frituur Madelyn, "fietscafé en frituur", met feestzaal Graethempoort. Op de gevel staat "Taverne Graethempoort" en "feestzaal".
 - **Adres:** Graethempoort 6, 3840 Borgloon.
-- **Telefoon:** 0465 64 62 25 (gsm, `+32465646225`, staat overal eerst) en 012 74 20 24 (vast, `+3212742024`).
+- **Telefoon:** 012 74 20 24 (vast, `+3212742024`) is het hoofdnummer en staat overal eerst (Madelyn via Martijn, 27/10/2026); daarna 0465 64 62 25 (gsm, `+32465646225`).
 - **E-mail:** frituurmadelynbv6@gmail.com. (Het vroegere `info@frituurmadelyn.be` bestaat niet aantoonbaar en is overal weg, ook in de structured data.)
 - **Btw:** BE1012.043.560 (klein in de footer).
 - **Facebook:** https://www.facebook.com/Madelyn-Frituur-Borgloon-317933245322579
