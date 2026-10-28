@@ -237,7 +237,7 @@ figcaption { font-size: 15px; color: var(--muted); margin-top: 10px; }
 .party .text { padding: clamp(48px, 7vw, 96px) clamp(20px, 6vw, 80px) clamp(48px, 7vw, 96px) max(20px, calc(50cqw - var(--wrap) / 2)); align-self: center; }
 .party .text p:not(.label) { color: var(--muted); max-width: 54ch; }
 .party .photo { position: relative; border-radius: 0; min-height: 460px; }
-.party .photo img { position: absolute; inset: 0; object-position: 50% 38%; }
+.party .photo img { position: absolute; inset: 0; object-position: 50% 10%; }
 
 /* ---------- openingsuren & contact ---------- */
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: start; }

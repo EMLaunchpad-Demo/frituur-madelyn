@@ -49,7 +49,7 @@ Bron: de vorige website frituurmadelyn.be, gelezen op 26/10/2026. De HTML staat 
 ## Nog te bevestigen door Frituur Madelyn
 
 - [ ] **Groepsprijzen** op `/groepen` (koffie- of theestop € 3,00, met koek € 5,00, broodmaaltijd € 6,00 of € 8,00, menu's € 11,00 en € 13,00 p.p.). Ze komen van de oude site en zijn jaren oud. Op de pagina staat "Prijzen onder voorbehoud, vraag een offerte op maat." Ze staan bewust niet in de structured data.
-- [ ] **Is `snackvitrine.jpg` een foto van jullie eigen vitrine?** Op de oude site was het de algemene achtergrond bovenaan elke pagina, en het lijkt een professionele productfoto (merkverpakkingen, andere bakken dan op de toogfoto). Zo niet: als stockfoto behandelen. Tot dan staat er een neutrale alt-tekst ("Een snackvitrine ...").
+- [x] ~~**Is `snackvitrine.jpg` een foto van jullie eigen vitrine?**~~ Niet meer nodig: vervangen door eigen foto's (28/10/2026). Op de oude site was het de algemene achtergrond bovenaan elke pagina, en het lijkt een professionele productfoto (merkverpakkingen, andere bakken dan op de toogfoto). Zo niet: als stockfoto behandelen. Tot dan staat er een neutrale alt-tekst ("Een snackvitrine ...").
 - [ ] **Eigen foto's van de zaal binnen** (feestzaal, taverne, terras) en van eigen gerechten. Nu is er alleen de gevel; de feestzaal wordt met geen enkele stockfoto voorgesteld.
 - [ ] **Coördinaten** in de structured data: nu `50.80338, 5.34087`, het gebouw Graethempoort 6 volgens OpenStreetMap. Vergelijk met de pin in het Google Bedrijfsprofiel. Staan op drie plekken: `index.html`, `contact.html`, `feestzaal.html`.
 - [ ] **Google Bedrijfsprofiel:** naam, adres, telefoon en uren moeten daar exact gelijk zijn aan de site. Welk nummer staat daar als hoofdnummer?
@@ -57,20 +57,22 @@ Bron: de vorige website frituurmadelyn.be, gelezen op 26/10/2026. De HTML staat 
 
 ## Foto's
 
-Echte foto's van de zaak (van de oude site, omgezet naar webp):
+Eigen foto's van de zaak, getrokken door Martijn ter plaatse op 28/10/2026 (omgezet naar webp, locatiegegevens van de gsm weggehaald). De originelen staan niet in de repo.
 
-| Waar | Bestand | Bron |
+| Waar | Bestand | Wat |
 |---|---|---|
-| Home (welkom) | `gevel-graethempoort.webp` (+ `-800`) | `_oude-site/fotos/gevel-graethempoort.jpg` |
-| Feestzaal (bovenaan) | `gevel-feestzaal.webp` (700x525) | uitsnede van dezelfde gevelfoto, op de luifel met "feestzaal" |
-| Menukaart (tussen de lijsten) | `toog-snacks.webp` (+ `-800`) | `_oude-site/fotos/toog-snacks.jpg`, witbalans gecorrigeerd (paarse zweem weg) |
-| Home (burgers en broodjes) | `toog-hamburgers.webp` (800x600) | uitsnede van dezelfde toogfoto: platte hamburgers, kroketten en friet |
-| Home (groepen en feestzaal), groepen (bovenaan) | `fietsers-terras.webp` | `_oude-site/fotos/dagtoerist.jpg` |
-| Delen op sociale media | `og.jpg` (1200x630) | uit de gevelfoto |
+| Home (welkom) | `gevel-madelyn.webp` (1100x825, + `-800`) | ingang met het bord Koffiehuis Madelyn en de laadpaal voor elektrische fietsen |
+| Home (groepen en fietsers) | `gevel-frituur.webp` (1080x1440, + `-720`) | gevel met het lichtbord Frituur Koffiehuis Madelyn, laadpaal en terras (`object-position` 50% 10%, zodat het bord helemaal zichtbaar is) |
+| Home (snacks) | `vitrine-snacks.webp` (800x600) | uitsnede van de vitrine aan de toog: frikandellen, kroketten, worsten, eieren |
+| Home (burgers en broodjes) | `vitrine-burgers.webp` (800x600) | uitsnede van de vitrine: hamburgers, sateetjes, kipfingers, balletjes |
+| Menukaart (bovenaan) | `toog-friteuse-1600.webp` (+ `-800`) | achter de toog: friteuse en verse friet, de uitbaters van op de rug |
+| Menukaart (tussen de lijsten) | `vitrine-toog.webp` (1440x676, + `-800`) | de hele vitrine, zonder gezichten |
+| Delen op sociale media | `og.jpg` (1200x630) | uitsnede van de ingang met het bord Koffiehuis Madelyn |
+| Groepen (bovenaan) | `fietsers-terras.webp` | `_oude-site/fotos/dagtoerist.jpg` (oude site): selfie met een groep fietsers |
 
-Herkomst onzeker (zie "Nog te bevestigen"): `snackvitrine-1600.webp` (+ `-800`), uit `_oude-site/fotos/snackvitrine.jpg`, op home (snacks) en bovenaan de menukaart. Alleen met een neutrale alt-tekst gebruiken, nooit als "onze vitrine".
+Niet gebruikt van 28/10: de foto binnen met een klant aan tafel (herkenbaar, geen toestemming), de menuborden (prijzen in beeld, de site toont geen prijzen), de drankenfrigo met de vitrinekast, en het terras apart (kan later op /groepen of /contact). Op die foto's staan ook dingen die nog niet op de site staan: Kids Box (€10), Pure Beefburger, Chick'n Tenders, "Frit van huis" (€10), "Frit pitta schotel" (€13), Family-frit -10%, Payconiq by Bancontact en een Best Frit-label aan de gevel. Pas toevoegen na bevestiging van Ravi en Sam.
 
-Niet gebruikt: `dagtoerist-2.jpg` (mosselen met friet; mosselen staan niet op de menukaart), `Bancontact.jpg` (betaalterminal) en het oude logo.
+De oude foto's (`gevel-graethempoort`, `snackvitrine`, `toog-snacks`, `toog-hamburgers`) staan nu in `_oude-site/ongebruikt/`. Daarmee is ook de vraag over de herkomst van `snackvitrine.jpg` niet meer nodig.
 
 Stockfoto's van [Pexels](https://www.pexels.com/license/) (gratis, ook commercieel, naamsvermelding niet verplicht), lokaal opgeslagen. Ze tonen alleen eten, nooit de zaak of de feestzaal:
 
