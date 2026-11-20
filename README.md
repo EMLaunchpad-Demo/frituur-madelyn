@@ -67,6 +67,7 @@ Eigen foto's van de zaak, getrokken door Martijn ter plaatse op 28/10/2026 (omge
 | Home (burgers en broodjes) | `vitrine-burgers.webp` (800x600) | uitsnede van de vitrine: hamburgers, sateetjes, kipfingers, balletjes |
 | Menukaart (bovenaan) | `toog-friteuse-1600.webp` (+ `-800`) | achter de toog: friteuse en verse friet, de uitbaters van op de rug |
 | Menukaart (tussen de lijsten) | `vitrine-toog.webp` (1440x676, + `-800`) | de hele vitrine, zonder gezichten |
+| Home (Cristal van 't vat, donker blok onder het welkom) | `cristal-van-t-vat.webp` (1213x1551, + `-640`) | affiche van Madelyn zelf (via Martijn, 20/11/2026): pint Cristal, friet en de tap. De tekst staat in het beeld, dus nooit bijsnijden |
 | Delen op sociale media | `og.jpg` (1200x630) | uitsnede van de ingang met het bord Koffiehuis Madelyn |
 | Groepen (bovenaan) | `fietsers-terras.webp` | `_oude-site/fotos/dagtoerist.jpg` (oude site): selfie met een groep fietsers |
 
